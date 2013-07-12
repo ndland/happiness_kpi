@@ -6,3 +6,6 @@ describe "Home View", ->
 
   it "exists", ->
     expect(@subject).to.exist
+
+  it "has an initialize function", ->
+    expect(@subject.initialize).to.exist
