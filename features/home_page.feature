@@ -5,7 +5,7 @@ Feature: Home Page
     Then I should see three pictures representing my mood
 
     @WIP
-  Scenario: I am able to select one of the images
+  Scenario: When I click one of the faces, it records the selection in the database
     Given I am on the home page
-    When I select one of the faces
-    # Then I should see the image is selected
+    When I click on a face
+    Then I should see the selection recorded in the database
