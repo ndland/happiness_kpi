@@ -7,5 +7,8 @@ describe "App View", ->
   it "exists", ->
     expect(@subject).to.exist
 
-  it "has an events function", ->
-    expect(@subject.events).to.exist
+  it "has an render function", ->
+    expect(@subject.render).to.exist
+
+  it "has an 'events' property", ->
+    expect(@subject).to.have.property('events')
