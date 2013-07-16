@@ -16,13 +16,12 @@ describe "App View", ->
 
       sinon.assert.calledOnce @subject.render
 
-    # it "compiles the handlebars template", ->
-
-
   describe "#render", ->
 
     it "has an render function", ->
       expect(@subject.render).to.exist
+
+
 
 
 
