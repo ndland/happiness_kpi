@@ -1,7 +1,13 @@
 namespace "happiness_kpi", (exports) ->
-  exports.appView = Backbone.View.extend ->
+  exports.appView = Backbone.View.extend
+
+    initialize: ->
+      @render()
+
+    # events:
+    #   "click #happy" : "selection"
 
     render: ->
 
-    events:
-      "click" : "#happy"
+    selection: ->
+      console.log "selection was called"

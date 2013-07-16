@@ -3,15 +3,14 @@ Given /^I am on the home page$/ do
 end
 
 Then /^I should see three pictures representing my mood$/ do
-  page.should have_xpath("//img[@src=\"/assets/smiley.jpg\"]")
-  page.should have_xpath("//img[@src=\"/assets/undecided.jpg\"]")
-  page.should have_xpath("//img[@src=\"/assets/sad.jpg\"]")
+  find(:css, 'input#happy')
+  find(:css, 'input#undecided')
+  find(:css, 'input#sad')
 end
 
 When /^I click on a face$/ do
-  page.find(:css, '#happy').click
+  find(:css, '#happy').trigger('click')
 end
-
 
 Then /^I should see the selection recorded in the database$/ do
   HappinessKpiData.count should eq 1

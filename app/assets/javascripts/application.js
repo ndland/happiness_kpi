@@ -18,4 +18,5 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/happiness_kpi
+//= require sinon
 //= require_tree .

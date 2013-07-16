@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 gem 'rails'
 gem 'haml'
 gem 'mocha', :require => false
-gem 'sinon-rails'
 gem 'poltergeist'
 gem 'rails-backbone'
+gem 'poltergeist'
 
 gem 'pg'
 

@@ -5,6 +5,7 @@ Feature: Home Page
     Then I should see three pictures representing my mood
 
     @WIP
+    @javascript
   Scenario: When I click one of the faces, it records the selection in the database
     Given I am on the home page
     When I click on a face
