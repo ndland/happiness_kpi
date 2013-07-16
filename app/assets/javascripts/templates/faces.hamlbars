@@ -1,0 +1,3 @@
+%img{ :src => "/assets/smiley.jpg", :alt => "happy", :id => "happy" }
+%img{ :src => "/assets/undecided.jpg", :alt => "undecided", :id => "undecided" }
+%img{ :src => "/assets/sad.jpg", :alt => "sad", :id => "sad" }
