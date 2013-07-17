@@ -9,6 +9,9 @@ describe "App View", ->
 
   describe "#initialize", ->
 
+    it "exists", ->
+      expect(@subject.initialize).to.exist
+
     it "calls the render function", ->
       @subject.render = sinon.spy()
 
@@ -18,8 +21,16 @@ describe "App View", ->
 
   describe "#render", ->
 
-    it "has an render function", ->
+    it "exists", ->
       expect(@subject.render).to.exist
+
+    it "renders the 'faces' template", ->
+      HandlebarsTemplates.faces = sinon.spy()
+
+      @subject.initialize()
+
+      sinon.assert.calledOnce HandlebarsTemplates.faces
+
 
 
 

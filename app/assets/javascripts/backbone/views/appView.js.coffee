@@ -7,6 +7,6 @@ namespace "happiness_kpi", (exports) ->
       @render()
 
     render: ->
+      HandlebarsTemplates.faces()
 
     selection: ->
-      console.log "selection was called"
