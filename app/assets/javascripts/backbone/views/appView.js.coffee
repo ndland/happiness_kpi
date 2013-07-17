@@ -3,10 +3,12 @@ namespace "happiness_kpi", (exports) ->
 
     template: HandlebarsTemplates['templates/faces']
 
+    el: '#display'
+
     initialize: ->
       @render()
 
     render: ->
-      HandlebarsTemplates.faces()
+      @$el.html HandlebarsTemplates.faces()
 
     selection: ->
