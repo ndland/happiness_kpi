@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130712180659) do
+ActiveRecord::Schema.define(:version => 20130718202953) do
 
   create_table "happiness_kpi_data", :force => true do |t|
     t.integer  "emotion"
