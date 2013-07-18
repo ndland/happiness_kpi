@@ -29,39 +29,63 @@ describe "App View", ->
       expect(@subject.render).to.exist
 
     it "renders the 'faces' template", ->
-      HandlebarsTemplates.faces = sinon.spy()
+      sinon.spy(HandlebarsTemplates, "faces")
 
       @subject.initialize()
 
       sinon.assert.calledOnce HandlebarsTemplates.faces
+      HandlebarsTemplates.faces.restore()
 
-  describe "#emotionSelection", ->
+  describe "#happySelected", ->
 
     it "exists", ->
-      expect(@subject.emotionSelection).to.exist
+      expect(@subject.happySelected).to.exist
 
     it "is called when the happy face is clicked", ->
-      @subject.emotionSelection = sinon.spy()
+      sinon.spy(@subject, "happySelected")
       @subject.delegateEvents()
 
       $("input#happy").click()
 
-      sinon.assert.calledOnce @subject.emotionSelection
+      sinon.assert.calledOnce @subject.happySelected
+
+    it "returns '3' when a user selects the happy face", ->
+      $("input#happy").click()
+
+      expect(@subject.happySelected()).to.equal(3)
+
+  describe "#undecidedSelected", ->
+
+    it "exists", ->
+      expect(@subject.undecidedSelected).to.exist
 
     it "is called when the undecided face is clicked", ->
-      @subject.emotionSelection = sinon.spy()
+      sinon.spy(@subject, "undecidedSelected")
       @subject.delegateEvents()
 
       $("input#undecided").click()
 
-      sinon.assert.calledOnce @subject.emotionSelection
+      sinon.assert.calledOnce @subject.undecidedSelected
+
+    it "returns '2' when a user selects the undecided face", ->
+      $("input#undecided").click()
+
+      expect(@subject.undecidedSelected()).to.equal(2)
+
+  describe "#sadSelected", ->
+
+    it "exists", ->
+      expect(@subject.sadSelected).to.exist
 
     it "is called when the sad face is clicked", ->
-      @subject.emotionSelection = sinon.spy()
+      sinon.spy(@subject, "sadSelected")
       @subject.delegateEvents()
 
       $("input#sad").click()
 
-      sinon.assert.calledOnce @subject.emotionSelection
+      sinon.assert.calledOnce @subject.sadSelected
 
+    it "returns '1' when a user selects the sad face", ->
+      $("input#sad").click()
 
+      expect(@subject.sadSelected()).to.equal(1)

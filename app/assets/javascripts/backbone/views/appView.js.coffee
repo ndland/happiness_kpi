@@ -9,12 +9,18 @@ namespace "happiness_kpi", (exports) ->
       @render()
 
     events: ->
-      'click #happy':     @emotionSelection
-      'click #undecided': @emotionSelection
-      'click #sad':       @emotionSelection
+      'click #happy':     @happySelected
+      'click #undecided': @undecidedSelected
+      'click #sad':       @sadSelected
 
     render: ->
       @$el.html HandlebarsTemplates.faces()
 
-    emotionSelection: ->
-      console.log "hello"
+    happySelected: ->
+      3
+
+    undecidedSelected: ->
+      2
+
+    sadSelected: ->
+      1
