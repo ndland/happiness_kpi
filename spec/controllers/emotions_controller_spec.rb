@@ -4,6 +4,7 @@ describe Api::EmotionsController do
   before do
     @emotion = Fabricate(:happiness_kpi_data)
   end
+
   it "has a status code of 200 for given emotion" do
     get :show, id: @emotion.id
 

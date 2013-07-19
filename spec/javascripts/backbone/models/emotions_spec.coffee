@@ -12,15 +12,15 @@ describe "Emotion Model", ->
   it "exists", ->
     expect(@subject).to.exist
 
-  it "accesses /api/emotions", (done) ->
-    callback = ->
-      done()
+  describe "#url", ->
 
-    @server.respondWith "POST", "/api/emotions", [200,
-      "Content-Type": "application/json",
-      '{}']
+    it "accesses /api/emotions", (done) ->
+      callback = ->
+        done()
 
-    myEmotion = new happiness_kpi.emotions
-    myEmotion.save null,
-      success: callback
+      @server.respondWith "POST", "/api/emotions", [200,
+        "Content-Type": "application/json",
+        '{}']
 
+      @subject.save null,
+        success: callback

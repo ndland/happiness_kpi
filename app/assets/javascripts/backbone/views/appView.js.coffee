@@ -6,6 +6,7 @@ namespace "happiness_kpi", (exports) ->
     el: '#display'
 
     initialize: ->
+      this.emotion = new happiness_kpi.emotions
       @render()
 
     events: ->
@@ -17,10 +18,10 @@ namespace "happiness_kpi", (exports) ->
       @$el.html HandlebarsTemplates.faces()
 
     happySelected: ->
-      3
+      this.emotion.set({ emotion: 3 })
 
     undecidedSelected: ->
-      2
+      this.emotion.set({ emotion: 2 })
 
     sadSelected: ->
-      1
+      this.emotion.set({ emotion: 1 })

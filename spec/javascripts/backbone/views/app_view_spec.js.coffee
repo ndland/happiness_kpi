@@ -23,6 +23,9 @@ describe "App View", ->
 
       sinon.assert.calledOnce @subject.render
 
+    it "creates a new instance of the 'emotions' model", ->
+      expect(@subject.emotion).to.exist
+
   describe "#render", ->
 
     it "exists", ->
@@ -49,10 +52,15 @@ describe "App View", ->
 
       sinon.assert.calledOnce @subject.happySelected
 
-    it "returns '3' when a user selects the happy face", ->
+    it "sets the 'emotion' model's emotion", ->
       $("input#happy").click()
 
-      expect(@subject.happySelected()).to.equal(3)
+      expect(@subject.emotion.get("emotion")).to.equal(3)
+
+    it "sets the 'emotion' model's location", ->
+      $("input#happy").click()
+
+      expect(@subject.emotion.get("location")).to.equal("Detroit")
 
   describe "#undecidedSelected", ->
 
@@ -67,10 +75,15 @@ describe "App View", ->
 
       sinon.assert.calledOnce @subject.undecidedSelected
 
-    it "returns '2' when a user selects the undecided face", ->
+    it "sets the 'emotion' model's emotion", ->
       $("input#undecided").click()
 
-      expect(@subject.undecidedSelected()).to.equal(2)
+      expect(@subject.emotion.get("emotion")).to.equal(2)
+
+    it "sets the 'emotion' model's location", ->
+      $("input#undecided").click()
+
+      expect(@subject.emotion.get("location")).to.equal("Detroit")
 
   describe "#sadSelected", ->
 
@@ -85,7 +98,12 @@ describe "App View", ->
 
       sinon.assert.calledOnce @subject.sadSelected
 
-    it "returns '1' when a user selects the sad face", ->
+    it "sets the 'emotion' model's emotion", ->
       $("input#sad").click()
 
-      expect(@subject.sadSelected()).to.equal(1)
+      expect(@subject.emotion.get("emotion")).to.equal(1)
+
+    it "sets the 'emotion' model's location", ->
+      $("input#sad").click()
+
+      expect(@subject.emotion.get("location")).to.equal("Detroit")
