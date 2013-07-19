@@ -23,6 +23,7 @@ end
 
 group :development do
   gem 'annotate'
+  gem 'guard-rspec'
 end
 
 group :assets do
