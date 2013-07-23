@@ -10,4 +10,4 @@ Feature: Home Page
   Scenario: When I click one of the faces, it records the selection in the database
     Given I am on the home page
     When I click on a face
-    Then I should see the selection recorded in the database
+    Then The selection should recorded in the database

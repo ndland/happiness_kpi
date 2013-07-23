@@ -1,32 +1,22 @@
 require 'spec_helper'
 
 describe Api::EmotionsController do
-  before do
-    @emotion = Fabricate(:happiness_kpi_data)
-  end
 
   it "has a status code of 200 for given emotion" do
-    get :create, id: @emotion.id
+    get :create, emotion: 3
 
     response.status.should equal(200)
   end
 
-  it "renders a json for the emotions" do
-    get :create, id: @emotion.id
+  it "creates a new record in HappinessKpiData model" do
+    get :create, emotion: 3
 
-    theJson = JSON.parse(response.body)
-    p theJson
-    theJson["emotion"].should eq(@emotion.emotion)
+    HappinessKpiData.count.should eq(1)
   end
 
-  it "renders both the location and the emotion" do
-    get :create, id: @emotion.id
+  it "stores the correct value for the emotion" do
+    get :create, emotion: 2
 
-    theJson = JSON.parse(response.body)
-
-    theJson.should have_key("emotion")
-
-    theJson.should_not have_key("created_at")
-    theJson.should_not have_key("updated_at")
+    HappinessKpiData.first.emotion.should eq(2)
   end
 end

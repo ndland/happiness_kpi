@@ -9,9 +9,10 @@ Then /^I should see three pictures representing my mood$/ do
 end
 
 When /^I click on a face$/ do
-  find(:css, '#happy').trigger('click')
+  find(:css, '#happy').click()
 end
 
-Then /^I should see the selection recorded in the database$/ do
-  HappinessKpiData.count should eq 1
+Then /^The selection should recorded in the database$/ do
+  sleep 1
+  HappinessKpiData.count.should eq(1)
 end

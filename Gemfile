@@ -25,6 +25,7 @@ end
 group :development do
   gem 'annotate'
   gem 'guard-rspec'
+  gem 'guard-cucumber'
 end
 
 group :assets do
