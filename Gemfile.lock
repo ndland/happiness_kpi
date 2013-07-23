@@ -221,6 +221,7 @@ DEPENDENCIES
   poltergeist
   rails
   rails-backbone
+  rb-fsevent
   rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)

@@ -1,9 +1,9 @@
 class Api::EmotionsController < ApplicationController
 
-  # TODO needs to be redone as the 'create' method.
   def create
-    emotion = HappinessKpiData.find(params[:id])
+    emotion = HappinessKpiData.new(emotion: params[:emotion])
 
-    render :json => emotion.to_json(:only => ["emotion", "location"])
+    render :json => emotion.to_json(:only => "emotion")
+    emotion.save
   end
 end

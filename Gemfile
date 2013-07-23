@@ -6,6 +6,7 @@ gem 'mocha', :require => false
 gem 'poltergeist'
 gem 'rails-backbone'
 gem 'poltergeist'
+gem 'rb-fsevent'
 
 gem 'pg'
 

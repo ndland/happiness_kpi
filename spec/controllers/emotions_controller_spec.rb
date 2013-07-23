@@ -1,8 +1,5 @@
 require 'spec_helper'
 
-# TODO need to change these tests to match for post.
-# will be a create method. Remove location tests.
-
 describe Api::EmotionsController do
   before do
     @emotion = Fabricate(:happiness_kpi_data)
@@ -18,18 +15,18 @@ describe Api::EmotionsController do
     get :create, id: @emotion.id
 
     theJson = JSON.parse(response.body)
+    p theJson
     theJson["emotion"].should eq(@emotion.emotion)
   end
 
-  # it "renders both the location and the emotion" do
-  #   get :show, id: @emotion.id
+  it "renders both the location and the emotion" do
+    get :create, id: @emotion.id
 
-  #   theJson = JSON.parse(response.body)
+    theJson = JSON.parse(response.body)
 
-  #   theJson.should have_key("emotion")
-  #   theJson.should have_key("location")
+    theJson.should have_key("emotion")
 
-  #   theJson.should_not have_key("created_at")
-  #   theJson.should_not have_key("updated_at")
-  # end
+    theJson.should_not have_key("created_at")
+    theJson.should_not have_key("updated_at")
+  end
 end
