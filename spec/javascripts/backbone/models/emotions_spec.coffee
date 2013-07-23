@@ -9,9 +9,6 @@ describe "Emotion Model", ->
   afterEach ->
     @server.restore()
 
-  it "exists", ->
-    expect(@subject).to.exist
-
   describe "#url", ->
 
     it "accesses /api/emotions", (done) ->

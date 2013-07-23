@@ -5,16 +5,14 @@ describe "App View", ->
     $("body").append('<div id="display"></div>')
     @subject = new happiness_kpi.appView
 
+    @callback = ->
+      done()
+
+
   afterEach ->
     $("body").append('<div id="display"></div>').remove()
 
-  it "exists", ->
-    expect(@subject).to.exist
-
   describe "#initialize", ->
-
-    it "exists", ->
-      expect(@subject.initialize).to.exist
 
     it "calls the render function", ->
       @subject.render = sinon.spy()
@@ -23,13 +21,7 @@ describe "App View", ->
 
       sinon.assert.calledOnce @subject.render
 
-    it "creates a new instance of the 'emotions' model", ->
-      expect(@subject.emotion).to.exist
-
   describe "#render", ->
-
-    it "exists", ->
-      expect(@subject.render).to.exist
 
     it "renders the 'faces' template", ->
       sinon.spy(HandlebarsTemplates, "faces")
@@ -41,9 +33,6 @@ describe "App View", ->
 
   describe "#happySelected", ->
 
-    it "exists", ->
-      expect(@subject.happySelected).to.exist
-
     it "is called when the happy face is clicked", ->
       sinon.spy(@subject, "happySelected")
       @subject.delegateEvents()
@@ -52,20 +41,12 @@ describe "App View", ->
 
       sinon.assert.calledOnce @subject.happySelected
 
-    it "sets the 'emotion' model's emotion", ->
-      $("input#happy").click()
+    it "sets the 'emotion' model's emotion to 3", ->
+      @subject.saveNewEmotion(3, @callback)
 
       expect(@subject.emotion.get("emotion")).to.equal(3)
 
-    it "sets the 'emotion' model's location", ->
-      $("input#happy").click()
-
-      expect(@subject.emotion.get("location")).to.equal("Detroit")
-
   describe "#undecidedSelected", ->
-
-    it "exists", ->
-      expect(@subject.undecidedSelected).to.exist
 
     it "is called when the undecided face is clicked", ->
       sinon.spy(@subject, "undecidedSelected")
@@ -75,20 +56,12 @@ describe "App View", ->
 
       sinon.assert.calledOnce @subject.undecidedSelected
 
-    it "sets the 'emotion' model's emotion", ->
-      $("input#undecided").click()
+    it "sets the 'emotion' model's emotion to 2", ->
+      @subject.saveNewEmotion(2, @callback)
 
       expect(@subject.emotion.get("emotion")).to.equal(2)
 
-    it "sets the 'emotion' model's location", ->
-      $("input#undecided").click()
-
-      expect(@subject.emotion.get("location")).to.equal("Detroit")
-
   describe "#sadSelected", ->
-
-    it "exists", ->
-      expect(@subject.sadSelected).to.exist
 
     it "is called when the sad face is clicked", ->
       sinon.spy(@subject, "sadSelected")
@@ -99,11 +72,23 @@ describe "App View", ->
       sinon.assert.calledOnce @subject.sadSelected
 
     it "sets the 'emotion' model's emotion", ->
-      $("input#sad").click()
+      @subject.saveNewEmotion(1, @callback)
 
       expect(@subject.emotion.get("emotion")).to.equal(1)
 
-    it "sets the 'emotion' model's location", ->
-      $("input#sad").click()
+  describe "#saveNewEmotion", ->
 
-      expect(@subject.emotion.get("location")).to.equal("Detroit")
+    it "creates a new instance of the 'emotions' model", ->
+      @subject.saveNewEmotion(3, @callback)
+
+      expect(@subject.emotion).to.exist
+
+    it "sets the 'emotion' model's emotion", ->
+      @subject.saveNewEmotion(3, @callback)
+
+      expect(@subject.emotion.get("emotion")).to.equal(3)
+
+    # TODO any way to test?
+    it "saves the data passed into the model", ->
+      @subject.saveNewEmotion(42, @callback)
+
