@@ -16,3 +16,7 @@ Then /^The selection should recorded in the database$/ do
   sleep 1
   HappinessKpiData.count.should eq(1)
 end
+
+Then /^I should see a link that says "Reports"$/ do
+  find_link("Reports")
+end

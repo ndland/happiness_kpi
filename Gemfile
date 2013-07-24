@@ -26,6 +26,7 @@ group :development do
   gem 'annotate'
   gem 'guard-rspec'
   gem 'guard-cucumber'
+  gem 'guard-livereload'
 end
 
 group :assets do
