@@ -20,3 +20,11 @@ end
 Then /^I should see a link that says "Reports"$/ do
   find_link("Reports")
 end
+
+When /^I click on the "(.*?)" link$/ do |reports|
+  click_link reports
+end
+
+Then /^I should be directed to the reports page$/ do
+  current_path.should eq("/reports")
+end

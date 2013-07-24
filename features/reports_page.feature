@@ -1,8 +1,6 @@
 Feature: Reports Page
 
-    @WIP
-    @javascript
-  Scenario:
-    Given I am on the home page
-    When I click on a face
-    Then The selection should recorded in the database
+  #   @javascript
+  # Scenario: There should be a link to the reports on the home page
+  #   Given I am on the home page
+  #   Then I should see the reports link
