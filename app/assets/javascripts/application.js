@@ -19,5 +19,6 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require sinon
+//= require Highcharts/js/highcharts
 //= require_tree ./templates
 //= require_tree .
