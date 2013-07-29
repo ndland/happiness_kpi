@@ -12,6 +12,9 @@ describe "App View", ->
   afterEach ->
     $("body").append('<div id="display"></div>').remove()
 
+  it 'has an el property', ->
+    assert.equal(@subject.$el.selector, "#display")
+
   describe "#initialize", ->
 
     it "calls the render function", ->
