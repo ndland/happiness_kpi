@@ -39,4 +39,9 @@ namespace "happiness_kpi", (exports) ->
         ]
 
     getDate: ->
-      "2013/7/29"
+      currentDate = new Date()
+      if currentDate.getMonth() < 10
+        currentDate.getFullYear() + "/" + 0 + (currentDate.getMonth() + 1) + "/" + currentDate.getDate()
+      else
+        currentDate.getFullYear() + "/" + (currentDate.getMonth() + 1) + "/" + currentDate.getDate()
+

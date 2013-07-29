@@ -23,4 +23,4 @@ describe "Chart View", ->
   describe "#getDate", ->
 
     it 'gets the current date', ->
-      assert.equal @subject.getDate(), "2013/7/29"
+      assert.equal @subject.getDate(), "2013/07/29"
