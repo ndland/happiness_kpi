@@ -22,5 +22,6 @@ describe "Chart View", ->
 
   describe "#getDate", ->
 
-    it 'gets the current date', ->
-      assert.equal @subject.getDate(), "2013/07/29"
+    [0, 1, 10, 30].forEach (index) ->
+      it 'returns ' + moment().subtract('days', index).format("YYYY/MM/DD") + ' when passed ' + index, ->
+        assert.equal @subject.getDate(index), moment().subtract('days', index).format("YYYY/MM/DD")

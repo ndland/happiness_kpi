@@ -38,10 +38,5 @@ namespace "happiness_kpi", (exports) ->
           data: [3, 2.5, 1, 2, 2.7]
         ]
 
-    getDate: ->
-      currentDate = new Date()
-      if currentDate.getMonth() < 10
-        currentDate.getFullYear() + "/" + 0 + (currentDate.getMonth() + 1) + "/" + currentDate.getDate()
-      else
-        currentDate.getFullYear() + "/" + (currentDate.getMonth() + 1) + "/" + currentDate.getDate()
-
+    getDate: (days) ->
+      moment().subtract('days', days).format("YYYY/MM/DD")
