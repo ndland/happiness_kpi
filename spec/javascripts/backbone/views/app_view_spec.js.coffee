@@ -90,8 +90,3 @@ describe "App View", ->
       @subject.saveNewEmotion(3, @callback)
 
       expect(@subject.emotion.get("emotion")).to.equal(3)
-
-    # TODO any way to test?
-    it "saves the data passed into the model", ->
-      @subject.saveNewEmotion(42, @callback)
-

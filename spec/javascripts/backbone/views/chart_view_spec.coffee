@@ -11,17 +11,36 @@ describe "Chart View", ->
 
   describe "#initialize", ->
 
-    it 'calls the buildChart function', ->
-      @subject.buildChart = sinon.spy()
+    # it 'calls the buildChart function', ->
+    #   @subject.buildChart = sinon.spy()
 
+    #   @subject.initialize()
+
+    #   sinon.assert.calledOnce @subject.buildChart
+
+    # it 'calls the getAverageEmotion function', ->
+    #   @subject.getAverageEmotion = sinon.spy()
+
+    #   @subject.initialize()
+
+    #   sinon.assert.calledOnce @subject.getAverageEmotion
+
+    it 'creates a new instance of the "emotions" model', ->
       @subject.initialize()
 
-      sinon.assert.calledOnce @subject.buildChart
-
-  describe "#buildChart", ->
+      expect(@subject.emotion).to.exist
 
   describe "#getDate", ->
 
     [0, 1, 10, 30].forEach (index) ->
       it 'returns ' + moment().subtract('days', index).format("YYYY/MM/DD") + ' when passed ' + index, ->
         assert.equal @subject.getDate(index), moment().subtract('days', index).format("YYYY/MM/DD")
+
+  describe "#getAverageEmotion", ->
+
+    it 'fetches the data from the server', ->
+      spy = sinon.spy @subject.emotion, "fetch"
+
+      @subject.getAverageEmotion()
+
+      sinon.assert.calledOnce spy

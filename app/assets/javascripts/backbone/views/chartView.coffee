@@ -4,7 +4,9 @@ namespace "happiness_kpi", (exports) ->
     el: '#lineChart'
 
     initialize: ->
-      @buildChart()
+      # @buildChart()
+      # @getAverageEmotion()
+      @emotion = new happiness_kpi.emotions
 
     buildChart: ->
       chart = new Highcharts.Chart
@@ -16,7 +18,7 @@ namespace "happiness_kpi", (exports) ->
           text: "Average Happiness"
 
         xAxis:
-          categories: [new Date().getDay() - 2 ]
+          categories: []
 
         yAxis:
           title:
@@ -38,5 +40,8 @@ namespace "happiness_kpi", (exports) ->
           data: [3, 2.5, 1, 2, 2.7]
         ]
 
-    getDate: (days) ->
-      moment().subtract('days', days).format("YYYY/MM/DD")
+    getDate: (daysPrevious) ->
+      moment().subtract('days', daysPrevious).format("YYYY/MM/DD")
+
+    getAverageEmotion: ->
+      @emotion.fetch()
