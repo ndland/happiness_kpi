@@ -11,6 +11,8 @@ describe "Chart View", ->
 
   describe "#initialize", ->
 
+    # TODO - fix these tests.
+
     # it 'calls the buildChart function', ->
     #   @subject.buildChart = sinon.spy()
 
@@ -35,12 +37,3 @@ describe "Chart View", ->
     [0, 1, 10, 30].forEach (index) ->
       it 'returns ' + moment().subtract('days', index).format("YYYY/MM/DD") + ' when passed ' + index, ->
         assert.equal @subject.getDate(index), moment().subtract('days', index).format("YYYY/MM/DD")
-
-  describe "#getAverageEmotion", ->
-
-    it 'fetches the data from the server', ->
-      spy = sinon.spy @subject.emotion, "fetch"
-
-      @subject.getAverageEmotion()
-
-      sinon.assert.calledOnce spy

@@ -4,7 +4,7 @@ namespace "happiness_kpi", (exports) ->
     el: '#lineChart'
 
     initialize: ->
-      # @buildChart()
+      @buildChart()
       # @getAverageEmotion()
       @emotion = new happiness_kpi.emotions
 
@@ -42,6 +42,3 @@ namespace "happiness_kpi", (exports) ->
 
     getDate: (daysPrevious) ->
       moment().subtract('days', daysPrevious).format("YYYY/MM/DD")
-
-    getAverageEmotion: ->
-      @emotion.fetch()
