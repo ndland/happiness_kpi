@@ -9,15 +9,16 @@ describe "Emotion Collection", ->
   afterEach ->
     @server.restore()
 
-  describe "#url", ->
+  describe "#fetchEmotionJson", ->
 
     it "accesses /api/emotions", (done) ->
-      callback = ->
+
+      @server.respondWith "GET", "/api/emotions", [200,
+        { "Content-Type": "application/json" },
+        '[{"date": " 1 Aug", "value": 2}]']
+
+      callback = (emotionJson) ->
+        assert.deepEqual emotionJson, [{"date": " 1 Aug", "value": 2}]
         done()
 
-      @server.respondWith "POST", "/api/emotions", [200,
-        "Content-Type": "application/json",
-        '{}']
-
-      @subject.save null,
-        success: callback
+      @subject.fetchEmotionJson callback

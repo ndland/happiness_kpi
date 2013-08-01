@@ -3,3 +3,9 @@ namespace "happiness_kpi", (exports) ->
 
     url: ->
       "/api/emotions"
+
+    fetchEmotionJson: (callback) ->
+      handleFetch = (collection, response, options) ->
+        callback(collection.toJSON())
+      @fetch(success: handleFetch)
+
