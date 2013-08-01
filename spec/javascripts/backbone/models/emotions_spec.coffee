@@ -1,6 +1,6 @@
 #= require application
 
-describe "Emotion Model", ->
+describe "Emotion Collection", ->
   beforeEach ->
     @subject = new happiness_kpi.emotions
     @server = sinon.fakeServer.create()

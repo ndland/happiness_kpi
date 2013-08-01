@@ -3,28 +3,33 @@ require 'spec_helper'
 describe Api::EmotionsController do
 
   describe "#index" do
-
-    it "fetches all of the emotions" do
-      10.times do
-        Fabricate(:happiness_kpi_data)
+    before do
+      [[1, '2013-07-30'],
+       [3, '2013-07-31'],
+       [2, '2013-08-01'],
+       [3, '2013-07-30'],
+       [2, '2013-07-31'],
+       [1, '2013-08-01']].each do |emotion, date|
+        Fabricate(:happiness_kpi_data, created_at: Date.parse(date), emotion: emotion)
       end
-
-      get :index
-
-      HappinessKpiData.count.should eq(10)
     end
 
-    it "only renders the emotion field" do
-      Fabricate(:happiness_kpi_data)
-
+    it "creates one value for each given date" do
       get :index
 
       theJson = JSON.parse(response.body)
 
-      theJson[0].should have_key("emotion")
+      theJson[0]["date"].strip.should eq("1 Aug")
+      theJson[1]["date"].strip.should eq("31 Jul")
+      theJson[2]["date"].strip.should eq("30 Jul")
 
-      theJson[0].should_not have_key("created_at")
+      theJson[0]["value"].should eq(1.5)
+      theJson[1]["value"].should eq(2.5)
+      theJson[2]["value"].should eq(2.0)
+
       theJson[0].should_not have_key("updated_at")
+      theJson[1].should_not have_key("updated_at")
+      theJson[2].should_not have_key("updated_at")
     end
   end
 

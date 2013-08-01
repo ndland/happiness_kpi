@@ -5,11 +5,10 @@ namespace "happiness_kpi", (exports) ->
 
     initialize: ->
       @buildChart()
-      # @getAverageEmotion()
-      @emotion = new happiness_kpi.emotions
+      @emotions = new happiness_kpi.emotions
 
     buildChart: ->
-      chart = new Highcharts.Chart
+      @chart = new Highcharts.Chart
         chart:
           type: 'spline'
           renderTo: 'lineChart'
@@ -37,8 +36,16 @@ namespace "happiness_kpi", (exports) ->
 
         series: [
           name: 'Happiness'
-          data: [3, 2.5, 1, 2, 2.7]
+          data: []
         ]
 
-    getDate: (daysPrevious) ->
-      moment().subtract('days', daysPrevious).format("YYYY/MM/DD")
+    plotData: ->
+      dates = []
+      value = []
+
+      @emotions.forEach (date) ->
+        value.push date.get('value')
+        dates.push date.get('date')
+
+      @chart.series[0].setData value
+      @chart.xAxis[0].categories = dates

@@ -4,11 +4,16 @@ class Api::EmotionsController < ApplicationController
     @emotion = HappinessKpiData.new(emotion: params[:emotion])
     @emotion.save
 
-    render :json => @emotion.emotion
+    render :json => {}
   end
 
   def index
-    all_emotions = HappinessKpiData.all
-    render :json => all_emotions.to_json(:only => "emotion")
+    result = HappinessKpiData.group('DATE(created_at)').average('emotion')
+
+    data = result.map do |date, averageEmotion|
+      { date: date.to_date.to_s(:short), value: averageEmotion.to_f }
+    end
+
+    render :json => data
   end
 end
