@@ -26,8 +26,6 @@ namespace "happiness_kpi", (exports) ->
       @saveNewEmotion(1, null)
 
     saveNewEmotion: (emotion, callback) ->
-      # @emotion = new happiness_kpi.emotionsCollection([ value: emotion ])
-      # console.log @emotion
-      # TODO make this a model as before.
+      @emotionsCollection = new happiness_kpi.emotionsCollection
 
-      # @emotion.create emotion: emotion
+      @emotionsCollection.add({ value: emotion })
