@@ -47,7 +47,7 @@ describe "App View", ->
     it "sets the 'value' for the emotionsCollection", ->
       @subject.saveNewEmotion(3, @callback)
 
-      expect(@subject.emotionsCollection.models[0].attributes.value).to.equal(3)
+      expect(@subject.emotion.get('emotion')).to.equal(3)
 
   describe "#undecidedSelected", ->
 
@@ -62,7 +62,7 @@ describe "App View", ->
     it "sets the 'value' for the emotionsCollection", ->
       @subject.saveNewEmotion(2, @callback)
 
-      expect(@subject.emotionsCollection.models[0].attributes.value).to.equal(2)
+      expect(@subject.emotion.get('emotion')).to.equal(2)
 
   describe "#sadSelected", ->
 
@@ -77,16 +77,17 @@ describe "App View", ->
     it "sets the 'value' for the emotionsCollection", ->
       @subject.saveNewEmotion(1, @callback)
 
-      expect(@subject.emotionsCollection.models[0].attributes.value).to.equal(1)
+      expect(@subject.emotion.get('emotion')).to.equal(1)
 
   describe "#saveNewEmotion", ->
 
     it "creates a new instance of the 'emotionsCollection' collection", ->
       @subject.saveNewEmotion(3, @callback)
 
-      expect(@subject.emotionsCollection).to.exist
+      expect(@subject.emotion).to.exist
 
     it "sets the 'emotion' model's emotion", ->
       @subject.saveNewEmotion(3, @callback)
 
-      expect(@subject.emotionsCollection.models[0].attributes.value).to.equal(3)
+      expect(@subject.emotion.get('emotion')).to.equal(3)
+

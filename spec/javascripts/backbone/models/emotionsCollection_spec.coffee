@@ -11,7 +11,7 @@ describe "Emotion Collection", ->
 
   describe "#fetchEmotionJson", ->
 
-    it "accesses /api/emotions", (done) ->
+    it "does a GET to /api/emotions", (done) ->
 
       @server.respondWith "GET", "/api/emotions", [200,
         { "Content-Type": "application/json" },

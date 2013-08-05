@@ -26,6 +26,8 @@ namespace "happiness_kpi", (exports) ->
       @saveNewEmotion(1, null)
 
     saveNewEmotion: (emotion, callback) ->
-      @emotionsCollection = new happiness_kpi.emotionsCollection
+      @emotion = new happiness_kpi.emotion
 
-      @emotionsCollection.add({ value: emotion })
+      @emotion.set({ emotion: emotion })
+
+      @emotion.save null, success: callback
