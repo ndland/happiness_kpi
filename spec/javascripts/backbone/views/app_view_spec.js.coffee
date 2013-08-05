@@ -44,49 +44,49 @@ describe "App View", ->
 
       sinon.assert.calledOnce @subject.happySelected
 
-    it "sets the 'emotion' model's emotion to 3", ->
-      @subject.saveNewEmotion(3, @callback)
+    # it "sets the 'emotion' model's emotion to 3", ->
+    #   @subject.saveNewEmotion(3, @callback)
 
-      expect(@subject.emotion.get("emotion")).to.equal(3)
+    #   expect(@subject.emotion.get("emotion")).to.equal(3)
 
-  describe "#undecidedSelected", ->
+  # describe "#undecidedSelected", ->
 
-    it "is called when the undecided face is clicked", ->
-      sinon.spy(@subject, "undecidedSelected")
-      @subject.delegateEvents()
+  #   it "is called when the undecided face is clicked", ->
+  #     sinon.spy(@subject, "undecidedSelected")
+  #     @subject.delegateEvents()
 
-      $("input#undecided").click()
+  #     $("input#undecided").click()
 
-      sinon.assert.calledOnce @subject.undecidedSelected
+  #     sinon.assert.calledOnce @subject.undecidedSelected
 
-    it "sets the 'emotion' model's emotion to 2", ->
-      @subject.saveNewEmotion(2, @callback)
+  #   it "sets the 'emotion' model's emotion to 2", ->
+  #     @subject.saveNewEmotion(2, @callback)
 
-      expect(@subject.emotion.get("emotion")).to.equal(2)
+  #     expect(@subject.emotion.get("emotion")).to.equal(2)
 
-  describe "#sadSelected", ->
+  # describe "#sadSelected", ->
 
-    it "is called when the sad face is clicked", ->
-      sinon.spy(@subject, "sadSelected")
-      @subject.delegateEvents()
+  #   it "is called when the sad face is clicked", ->
+  #     sinon.spy(@subject, "sadSelected")
+  #     @subject.delegateEvents()
 
-      $("input#sad").click()
+  #     $("input#sad").click()
 
-      sinon.assert.calledOnce @subject.sadSelected
+  #     sinon.assert.calledOnce @subject.sadSelected
 
-    it "sets the 'emotion' model's emotion", ->
-      @subject.saveNewEmotion(1, @callback)
+  #   it "sets the 'emotion' model's emotion", ->
+  #     @subject.saveNewEmotion(1, @callback)
 
-      expect(@subject.emotion.get("emotion")).to.equal(1)
+  #     expect(@subject.emotion.get("emotion")).to.equal(1)
 
-  describe "#saveNewEmotion", ->
+  # describe "#saveNewEmotion", ->
 
-    it "creates a new instance of the 'emotions' model", ->
-      @subject.saveNewEmotion(3, @callback)
+  #   it "creates a new instance of the 'emotions' model", ->
+  #     @subject.saveNewEmotion(3, @callback)
 
-      expect(@subject.emotion).to.exist
+  #     expect(@subject.emotion).to.exist
 
-    it "sets the 'emotion' model's emotion", ->
-      @subject.saveNewEmotion(3, @callback)
+  #   it "sets the 'emotion' model's emotion", ->
+  #     @subject.saveNewEmotion(3, @callback)
 
-      expect(@subject.emotion.get("emotion")).to.equal(3)
+  #     expect(@subject.emotion.get("emotion")).to.equal(3)

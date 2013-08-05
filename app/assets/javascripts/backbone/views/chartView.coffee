@@ -5,7 +5,7 @@ namespace "happiness_kpi", (exports) ->
 
     initialize: ->
       @buildChart()
-      @emotions = new happiness_kpi.emotions
+      @emotionCollection = new happiness_kpi.emotionsCollection
 
     buildChart: ->
       @chart = new Highcharts.Chart
@@ -43,7 +43,7 @@ namespace "happiness_kpi", (exports) ->
       dates = []
       value = []
 
-      @emotions.forEach (date) ->
+      @emotionCollection.forEach (date) ->
         value.push date.get('value')
         dates.push date.get('date')
 

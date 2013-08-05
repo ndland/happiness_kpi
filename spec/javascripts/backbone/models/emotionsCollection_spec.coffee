@@ -2,7 +2,7 @@
 
 describe "Emotion Collection", ->
   beforeEach ->
-    @subject = new happiness_kpi.emotions
+    @subject = new happiness_kpi.emotionsCollection
     @server = sinon.fakeServer.create()
     @server.autoRespond = true
 
@@ -22,3 +22,4 @@ describe "Emotion Collection", ->
         done()
 
       @subject.fetchEmotionJson callback
+

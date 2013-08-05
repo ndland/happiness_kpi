@@ -1,5 +1,7 @@
 namespace "happiness_kpi", (exports) ->
-  exports.emotions = Backbone.Collection.extend
+  exports.emotionsCollection = Backbone.Collection.extend
+
+    model: happiness_kpi.emotion
 
     url: ->
       "/api/emotions"
