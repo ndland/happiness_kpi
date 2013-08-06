@@ -6,6 +6,17 @@ describe "Chart View", ->
     $('body').append('<div id="lineChart"></div>')
     @subject = new happiness_kpi.chartView
 
+    @subject.emotionCollection.add([ date: "2013/07/31", value: 3 ])
+    @subject.emotionCollection.add([ date: "2013/08/01", value: 1 ])
+    @subject.emotionCollection.add([ date: "2013/08/03", value: 2 ])
+
+    @dates = []
+    @values =[]
+
+    @subject.emotionCollection.forEach (eachItem) =>
+      @values.push eachItem.get 'value'
+      @dates.push eachItem.get 'date'
+
   it 'has an el property', ->
     assert.equal(@subject.$el.selector, "#lineChart")
 
@@ -36,36 +47,46 @@ describe "Chart View", ->
 
   describe "#plotData", ->
 
-    beforeEach ->
-      @subject.emotionCollection.add([ date: "2013/07/31", value: 3 ])
-      @subject.emotionCollection.add([ date: "2013/08/01", value: 1 ])
-      @subject.emotionCollection.add([ date: "2013/08/03", value: 2 ])
-
-    it 'redraws the chart', ->
-      spy = sinon.spy(@subject.chart, "redraw")
+    it 'calls the fetchData() method', ->
+      spy = sinon.spy @subject, "fetchData"
 
       @subject.plotData()
 
-      assert spy.calledOnce
+      sinon.assert.calledOnce @subject.fetchData
+      @subject.fetchData.restore()
 
-    # it 'calls plotData()', ->
-    #   spy = sinon.spy @subject, "plotData"
+    it 'sets data series property to plotData()', ->
+      stub = sinon.stub(@subject, 'fetchData', (callback) =>
+        callback(@dates, @values)
+      )
 
-    #   @subject.plotData()
+      @subject.plotData()
 
-    #   sinon.assert.calledOnce @subject.plotData
-    #   @subject.plotData.restore()
+      [0, 1, 2].forEach (i) =>
+        assert.deepEqual @subject.chart.series[0].data[i].y, @values[i]
 
-    # it 'sets data series property to plotData()', ->
-    #   @subject.plotData()
-    #   values = [3, 1, 2]
+      assert.deepEqual @subject.chart.xAxis[0].categories, @dates
 
-    #   console.log @subject.chart
+  describe "#fetchData", ->
 
-    #   [0, 1, 2].forEach (i) =>
-    #     assert.deepEqual @subject.chart.series[0].data[i].y, values[i]
+    it 'fetches the data from the server', ->
+      spy = sinon.spy @subject.emotionCollection, "fetch"
 
-    # it 'sets xAxis property to plotData()', ->
-    #   @subject.plotData()
+      @subject.fetchData()
 
-    #   assert.deepEqual @subject.chart.xAxis[0].categories, ["2013/07/31", "2013/08/01", "2013/08/03"]
+      sinon.assert.calledOnce @subject.emotionCollection.fetch
+      @subject.emotionCollection.fetch.restore()
+
+    it 'it fetches the dates and values from the collection and calls the callback with the dates and values', (done) ->
+      callback = (dates, values) =>
+        assert.deepEqual ["2013/07/31", "2013/08/01", "2013/08/03"], dates
+        assert.deepEqual [3, 1, 2], values
+        done()
+
+      stub = sinon.stub(@subject.emotionCollection, 'fetch', (options) ->
+        options["success"]()
+      )
+
+      @subject.fetchData(callback)
+
+

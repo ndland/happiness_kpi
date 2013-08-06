@@ -6,7 +6,6 @@ namespace "happiness_kpi", (exports) ->
     initialize: ->
       @buildChart()
       @emotionCollection = new happiness_kpi.emotionsCollection
-      @plotData()
 
     buildChart: ->
       @chart = new Highcharts.Chart
@@ -40,16 +39,17 @@ namespace "happiness_kpi", (exports) ->
           data: []
         ]
 
-
     plotData: ->
-      dates = []
-      value = []
+      @fetchData (dates, values) =>
+        @chart.series[0].setData values
+        @chart.xAxis[0].categories =  dates
 
-      @emotionCollection.fetch(success: =>
+    fetchData: (callback) ->
+      dates = []; values = []
 
-        @emotionCollection.forEach (date) =>
-          value.push date.get('value')
-          dates.push date.get('date')
+      @emotionCollection.fetch success: =>
+        @emotionCollection.forEach (eachItem) =>
+          values.push eachItem.get 'value'
+          dates.push eachItem.get 'date'
 
-          @chart.series[0].setData value
-          @chart.xAxis[0].categories = dates)
+        callback(dates, values)
