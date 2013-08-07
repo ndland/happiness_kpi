@@ -8,7 +8,7 @@ class Api::EmotionsController < ApplicationController
   end
 
   def index
-    result = HappinessKpiData.group('DATE(created_at)').average('emotion')
+    result = HappinessKpiData.order('DATE(created_at)').group('DATE(created_at)').average('emotion')
 
     data = result.map do |date, averageEmotion|
       { date: date.to_date.to_s(:short), value: averageEmotion.to_f.round(2) }
