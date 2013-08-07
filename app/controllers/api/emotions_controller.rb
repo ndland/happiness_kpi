@@ -14,6 +14,6 @@ class Api::EmotionsController < ApplicationController
       { date: date.to_date.to_s(:short), value: averageEmotion.to_f.round(2) }
     end
 
-    render :json => data
+    render :json => data.last(30)
   end
 end

@@ -40,6 +40,20 @@ describe Api::EmotionsController do
 
       theJson[0]["date"].strip.should eq("21 Jul")
     end
+
+    it "only displays the last 30 days worth of data" do
+      (1..40).each do |days|
+        result = Fabricate(:happiness_kpi_data)
+        result.created_at = days.days.ago
+        result.save
+      end
+
+      get :index
+
+      theJson = JSON.parse(response.body)
+
+      theJson.count.should equal(30)
+    end
   end
 
   describe "#create" do
