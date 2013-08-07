@@ -48,7 +48,7 @@ describe "Chart View", ->
       assert.isDefined @subject.chart, "chart is defined"
 
     it 'has a title of "Average Happiness"', ->
-      assert.equal @subject.chart.title.text, "Average Happiness"
+      assert.equal @subject.chart.title.text, "Average Happiness At Atomic Object"
 
     it 'renders to the correct element', ->
       assert.equal @subject.chart.renderTo.id, "lineChart"
