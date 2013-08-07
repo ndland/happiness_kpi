@@ -34,6 +34,14 @@ describe "Chart View", ->
 
       expect(@subject.emotionCollection).to.exist
 
+    it 'calls the plotData() function', ->
+      spy = sinon.spy @subject, "plotData"
+
+      @subject.initialize()
+
+      sinon.assert.calledOnce @subject.plotData
+      @subject.plotData.restore()
+
   describe "#buildChart", ->
 
     it 'creates a chart', ->
@@ -66,6 +74,15 @@ describe "Chart View", ->
         assert.deepEqual @subject.chart.series[0].data[i].y, @values[i]
 
       assert.deepEqual @subject.chart.xAxis[0].categories, @dates
+
+    it 'sets the categories before the setData', ->
+      stub = sinon.stub(@subject, 'fetchData', (callback) =>
+        callback(@dates, @values)
+        )
+
+      @subject.plotData()
+
+      assert.include $('.highcharts-axis-labels')[0].textContent, "2013/07/31"
 
   describe "#fetchData", ->
 

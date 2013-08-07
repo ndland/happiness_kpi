@@ -4,8 +4,8 @@ namespace "happiness_kpi", (exports) ->
     el: '#lineChart'
 
     initialize: ->
-      @buildChart()
       @emotionCollection = new happiness_kpi.emotionsCollection
+      @buildChart()
 
     buildChart: ->
       @chart = new Highcharts.Chart
@@ -39,10 +39,12 @@ namespace "happiness_kpi", (exports) ->
           data: []
         ]
 
+      @plotData()
+
     plotData: ->
       @fetchData (dates, values) =>
+        @chart.xAxis[0].categories = dates
         @chart.series[0].setData values
-        @chart.xAxis[0].categories =  dates
 
     fetchData: (callback) ->
       dates = []; values = []
