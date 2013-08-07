@@ -6,4 +6,3 @@ namespace "happiness_kpi", (exports) ->
       value: null
 
     url: '/api/emotions'
-
