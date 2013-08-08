@@ -50,7 +50,20 @@ namespace "happiness_kpi", (exports) ->
       @plotData()
 
     plotData: ->
-      @chart.xAxis[0].categories = ["2013/07/31", "2013/08/01", "2013/08/02", "2013/08/03", "2013/08/04"]
-      @chart.series[0].setData [3, 4, 6, 1, 3]
-      @chart.series[1].setData [2, 5, 7, 1, 2]
-      @chart.series[2].setData [3, 5, 2, 1, 5]
+      @fetchData (dates, happy, sad, undecided) =>
+        @chart.xAxis[0].categories = dates
+        @chart.series[0].setData happy
+        @chart.series[1].setData undecided
+        @chart.series[2].setData sad
+
+    fetchData: (callback) ->
+      dates = []; happy = []; sad = []; undecided = []
+
+      @allEmotionsCollection.fetch success: =>
+        @allEmotionsCollection.forEach (eachItem) =>
+          dates.push eachItem.get 'date'
+          happy.push eachItem.get 'happy'
+          sad.push eachItem.get 'sad'
+          undecided.push eachItem.get 'undecided'
+
+        callback(dates, happy, sad, undecided)
