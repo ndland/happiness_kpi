@@ -5,5 +5,6 @@ HappinessKpi::Application.routes.draw do
 
   namespace :api do
     resources :emotions
+    resources :last_week
   end
 end

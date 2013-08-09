@@ -8,13 +8,13 @@ describe "allEmotions Collection", ->
 
   describe "#url", ->
 
-    it 'does a GET to /api/emotions/last5days', (done) ->
-      @server.respondWith "GET", "/api/emotions/last5days", [200,
+    it 'does a GET to /api/last_week', (done) ->
+      @server.respondWith "GET", "/api/last_week", [200,
         { "Content-Type": "application/json" },
-        '[{"date": " 1 Aug", "value": 2}]']
+        '[{"date": " 1 Aug", "happy": 2}]']
 
       callback = (emotionJson) ->
-        assert.deepEqual emotionJson, [{"date": " 1 Aug", "value": 2}]
+        assert.deepEqual emotionJson, [{"date": " 1 Aug", "happy": 2}]
         done()
 
       @subject.fetchEmotionJson callback

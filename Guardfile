@@ -32,6 +32,7 @@ end
 
 guard 'livereload' do
   watch(%r{app/views/.+\.(erb|haml|slim|hamlbars)$})
+  watch(%r{app/controllers/api/.+\.(rb)$})
   watch(%r{app/views/reports/.+\.(erb|haml|slim|hamlbars)$})
   watch(%r{app/assets/javascripts/templates/.+\.(erb|haml|slim|hamlbars)$})
   watch(%r{app/assets/javascripts/backbone/views/.+\.(coffee|js)$})
@@ -39,6 +40,7 @@ guard 'livereload' do
   watch(%r{app/views/.+\.(erb|haml|slim)$})
   watch(%r{spec/javascripts/backbone/views/.+\.(coffee|js)$})
   watch(%r{spec/javascripts/backbone/models/.+\.(coffee|js)$})
+  watch(%r{spec/controllers/.+\.(rb)$})
   watch(%r{app/helpers/.+\.rb})
   watch(%r{public/.+\.(css|js|html)})
   watch(%r{config/locales/.+\.yml})
