@@ -8,12 +8,29 @@ class Api::EmotionsController < ApplicationController
   end
 
   def index
-    result = HappinessKpiData.order('DATE(created_at)').group('DATE(created_at)').average('emotion')
+    date = params[:date] ? Date.parse(params[:date]) : Date.today
 
-    data = result.map do |date, averageEmotion|
-      { date: date.to_date.to_s(:short), value: averageEmotion.to_f.round(2) }
-    end
+    render :json => format_query(query(date))
+  end
 
-    render :json => data.last(30)
+  def query(date)
+    result = HappinessKpiData.
+      where("created_at >= ? AND created_at < ?", (date - 30), date + 1)
+  end
+
+  def format_query(query)
+    average_emotion = {}
+
+    query.each { |model|
+      date = model.created_at.strftime("%-d %b")
+
+      average_emotion[date] ||= { "entries" => [] };
+      average_emotion[date]["entries"].push model.emotion
+    }
+
+    finished = average_emotion.map { |x| average = x[1]["entries"].
+      inject{ |sum, s| sum + s } / x[1]["entries"].count.to_f
+      { "date" => x[0],
+        "value" => average.to_f.round(2) } }
   end
 end
