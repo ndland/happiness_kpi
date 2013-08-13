@@ -28,9 +28,12 @@ class Api::EmotionsController < ApplicationController
       average_emotion[date]["entries"].push model.emotion
     }
 
-    finished = average_emotion.map { |x| average = x[1]["entries"].
-      inject{ |sum, s| sum + s } / x[1]["entries"].count.to_f
-      { "date" => x[0],
-        "value" => average.to_f.round(2) } }
+    average_emotion.map { |key, value|
+      { "date" => key, "value" => average_of_array(value["entries"]) }}
+  end
+
+  def average_of_array(array)
+    average = array.inject(:+) / array.count.to_f
+    return average.round(2)
   end
 end

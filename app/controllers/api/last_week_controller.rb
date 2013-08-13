@@ -23,6 +23,6 @@ class Api::LastWeekController < ApplicationController
       sums[date][model.emotion] += 1
     }
 
-    finished = sums.map { |x| { "date" => x[0], "happy" => x[1][3], "undecided" => x[1][2], "sad" => x[1][1] } }
+    sums.map { |key, value| { "date" => key, "happy" => value[3], "undecided" => value[2], "sad" => value[1] } }
   end
 end

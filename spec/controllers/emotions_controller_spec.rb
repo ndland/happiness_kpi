@@ -118,11 +118,30 @@ describe Api::EmotionsController do
 
     it "returns an array of hashes for two given dates" do
       subject.format_query(@models[3..4]).should == [{ "date" => "21 Jul", "value" => 3},
-                                                       { "date" => "30 Jul", "value" => 3}]
+                                                     { "date" => "30 Jul", "value" => 3}]
     end
 
     it "returns an array of hashes for two models of the same date and the average emotion for the two models" do
       subject.format_query(@models[6..7]).should == [{ "date" => "9 Aug", "value" => 2.5}]
+    end
+  end
+
+  describe "#average_of_array" do
+
+    it "calculates the average of an array" do
+      subject.average_of_array([2,3,4]).should eq(3.0)
+    end
+
+    it "calculates the average of an array" do
+      subject.average_of_array([2, 3, 4, 5, 6, 9]).should eq(4.83)
+    end
+
+    it "calculates the average of an array" do
+      subject.average_of_array([1]).should eq(1.0)
+    end
+
+    it "calculates the average of an array" do
+      subject.average_of_array([1, 33, 5, 90]).should eq(32.25)
     end
   end
 end
