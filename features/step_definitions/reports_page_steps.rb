@@ -12,6 +12,6 @@ end
 Then /^I should see a bar chart$/ do
   find(:css, '#barChart')
   within(:css, '#barChart') do
-    page.should have_content('Emotions from last 5 days')
+    page.should have_content('Emotions for last 5 days')
   end
 end
