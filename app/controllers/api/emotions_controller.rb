@@ -15,7 +15,7 @@ class Api::EmotionsController < ApplicationController
 
   def query(date)
     result = HappinessKpiData.
-      where("created_at >= ? AND created_at < ?", (date - 30), date + 1)
+      where("created_at >= ? AND created_at <= ?", (date.beginning_of_day - 30.days), date.end_of_day)
   end
 
   def format_query(query)
