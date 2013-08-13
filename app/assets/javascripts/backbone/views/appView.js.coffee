@@ -14,6 +14,13 @@ namespace "happiness_kpi", (exports) ->
       'click #sad':       @sadSelected
 
     render: ->
+      $('#choices').modal {
+        show: true,
+        backdrop: true,
+        backdrop: 'static',
+        keyboard: false
+      }
+
       @$el.html HandlebarsTemplates.faces()
 
     happySelected: ->
@@ -31,3 +38,8 @@ namespace "happiness_kpi", (exports) ->
       @emotion.set({ emotion: emotion })
 
       @emotion.save null, success: callback
+
+      @closeModal()
+
+    closeModal: ->
+      $('#choices').modal 'hide'

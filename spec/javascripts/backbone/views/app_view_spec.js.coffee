@@ -2,15 +2,24 @@
 
 describe "App View", ->
   beforeEach ->
-    $("body").append('<div id="display"></div>')
+    $("body").append '<div class="modal" id="choices">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">Eh...</div>
+    <div class="modal-body">
+    <div id="display">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>'
     @subject = new happiness_kpi.appView
 
     @callback = ->
       done()
 
-
-  afterEach ->
-    $("body").append('<div id="display"></div>').remove()
+  # afterEach ->
+  #   $("body").append('<div id="display"></div>').remove()
 
   it 'has an el property', ->
     assert.equal(@subject.$el.selector, "#display")
@@ -33,6 +42,23 @@ describe "App View", ->
 
       sinon.assert.calledOnce HandlebarsTemplates.faces
       HandlebarsTemplates.faces.restore()
+
+    it 'shows the modal', ->
+      @subject.render()
+
+      expect($('#choices').data('modal').isShown).to.be.true
+
+    it "doesn't allow you to click outside the modal to close it", ->
+      @subject.render()
+
+      $('div').click()
+
+      expect($('#choices').data('modal').isShown).to.be.true
+
+    it "doesn't allow you to hit the escape key to close the modal", ->
+      @subject.render()
+
+      expect($('#choices').data('modal').options.keyboard).to.be.false
 
   describe "#happySelected", ->
 
@@ -91,3 +117,26 @@ describe "App View", ->
 
       expect(@subject.emotion.get('emotion')).to.equal(3)
 
+    it 'calls the method closeModal()', ->
+      sinon.spy(@subject, "closeModal")
+
+      $("input#sad").click()
+
+      sinon.assert.calledOnce @subject.closeModal
+
+  describe "#closeModal", ->
+
+    it 'closes the modal after the happy face is clicked', ->
+      $("input#happy").click()
+
+      expect($('#choices').data('modal').isShown).to.be.false
+
+    it 'closes the modal after the undecided face is clicked', ->
+      $("input#undecided").click()
+
+      expect($('#choices').data('modal').isShown).to.be.false
+
+    it 'closes the modal after the sad face is clicked', ->
+      $("input#sad").click()
+
+      expect($('#choices').data('modal').isShown).to.be.false

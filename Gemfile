@@ -7,6 +7,9 @@ gem 'poltergeist'
 gem 'rails-backbone'
 gem 'poltergeist'
 gem 'rb-fsevent'
+gem 'bootstrap-sass'
+gem 'sass-rails',   '~> 3.2.3'
+gem 'jquery-rails'
 
 gem 'pg'
 
@@ -31,9 +34,6 @@ end
 
 group :assets do
   gem 'handlebars_assets'
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'

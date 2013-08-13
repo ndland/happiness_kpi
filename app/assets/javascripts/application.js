@@ -11,10 +11,10 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require namespace
-//= require moment
 //= require jquery
 //= require jquery_ujs
 //= require underscore
+//= require bootstrap
 //= require handlebars.runtime
 //= require backbone
 //= require backbone_rails_sync
