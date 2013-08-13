@@ -6,6 +6,8 @@
 
 require 'cucumber/rails'
 require 'capybara/poltergeist'
+require 'simplecov'
+SimpleCov.start
 Capybara.javascript_driver = :poltergeist
 
 # Capybara defaults to CSS3 selectors rather than XPath.

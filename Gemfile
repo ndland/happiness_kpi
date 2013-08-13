@@ -17,6 +17,7 @@ group :test do
   gem 'capybara'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner', '1.0.0.RC1'
+  gem 'simplecov', :require => false
 end
 
 group :development, :test do
