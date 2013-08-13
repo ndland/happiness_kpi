@@ -36,6 +36,7 @@ guard 'livereload' do
   watch(%r{app/controllers/api/.+\.(rb)$})
   watch(%r{app/views/reports/.+\.(erb|haml|slim|hamlbars)$})
   watch(%r{app/assets/javascripts/templates/.+\.(erb|haml|slim|hamlbars)$})
+  watch(%r{app/assets/stylesheets/.+\.(css|scss)$})
   watch(%r{app/assets/javascripts/backbone/views/.+\.(coffee|js)$})
   watch(%r{app/assets/javascripts/backbone/models/.+\.(coffee|js)$})
   watch(%r{app/views/.+\.(erb|haml|slim)$})

@@ -38,15 +38,15 @@ namespace "happiness_kpi", (exports) ->
 
         series: [{
           name: 'Happy',
-          color: "#D0F53A"
+          color: "#329693"
           data: []
         }, {
           name: 'Undecided',
-          color: "#FFF268"
+          color: "#FEED91"
           data: []
         },
           name: 'Sad',
-          color: "#F99E79"
+          color: "#D53D41"
           data: []
         ]
 
