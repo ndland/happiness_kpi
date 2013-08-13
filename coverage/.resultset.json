@@ -3,7 +3,7 @@
     "coverage": {
       "/Users/Nick/Development/Rails/happiness_kpi/features/step_definitions/home_page_steps.rb": [
         1,
-        4,
+        2,
         null,
         null,
         1,
@@ -17,18 +17,6 @@
         null,
         null,
         1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
         1,
         1,
         null
@@ -53,7 +41,7 @@
         null
       ]
     },
-    "timestamp": 1376421211
+    "timestamp": 1376424865
   },
   "RSpec": {
     "coverage": {
