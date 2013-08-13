@@ -7,12 +7,10 @@ class Api::LastWeekController < ApplicationController
   end
 
   def query(date)
-    @last_five_days = HappinessKpiData.
+    HappinessKpiData.
       where("created_at >= ? AND created_at <= ?", (date.beginning_of_day - 5.days), date.end_of_day)
-    return @last_five_days
   end
 
-  # TODO Refactor
   def format_query(query)
     sums = {}
 
