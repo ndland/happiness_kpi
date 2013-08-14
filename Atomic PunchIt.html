@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://punchit.atomicobject.com/newpunch.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./Atomic PunchIt_files/common.css" type="text/css">
+
+    <link rel="stylesheet" href="./Atomic PunchIt_files/chosen.css" type="text/css">
+    <link rel="stylesheet" href="./Atomic PunchIt_files/background.css" type="text/css">
+    <link rel="stylesheet" href="./Atomic PunchIt_files/kpi.css" type="text/css">
+    <link rel="stylesheet" href="./Atomic PunchIt_files/better-punchit.css" type="text/css">
+
+    <script src="./Atomic PunchIt_files/jquery.js" type="text/javascript"></script><style type="text/css"></style>
+    <script src="./Atomic PunchIt_files/jquery-ui.js" type="text/javascript"></script>
+    <script src="./Atomic PunchIt_files/underscore.js" type="text/javascript"></script>
+    <script src="./Atomic PunchIt_files/raphael.js" type="text/javascript"></script>
+    <script src="./Atomic PunchIt_files/chosen.jquery.js" type="text/javascript"></script>
+    <script src="./Atomic PunchIt_files/d3.v3.min.js" type="text/javascript"></script>
+    <script src="./Atomic PunchIt_files/lzma.js" type="text/javascript"></script>
+    <title>Atomic PunchIt</title>
+  <script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script></head>
+  <body onload="initialize();" style="zoom: 1;">
+    <div class="header"><svg width="620" height="115" id="kpi" shape-rendering="crisp-edges"><defs>                    <style type="text/css">                      <![CDATA[                        @font-face {                        font-family: DINOT-Light;                        src: url('css/DINOT.woff');                        }                      ]]>                    </style>                  </defs><g><g class="bullet-graph" transform="translate(89,10)"><g class="week"><text class="label" y="12" x="-4">Hours</text><text class="small-label" y="24" x="-4">this week</text><rect class="week-total-avg" x="0" y="0" width="290.9166666666667" height="24"><title>12-week average of total hours per week</title></rect><rect class="week-billable-avg" height="24" width="4.5"><title>12-week average of billable hours per week</title></rect><rect class="week-total" x="0" y="8" width="124.25000000000001" height="8"><title>Total hours punched this week</title></rect><rect class="week-billable" x="0" y="8" width="0" height="8"><title>Billable hours punched this week</title></rect><rect class="week-target" x="280" y="4" width="2" height="16"><title>Billable hours possible this week</title></rect><text class="numeric-label billable" y="15" dy="0.20em" x="301.9166666666667">0</text><text class="numeric-label total" y="15" dy="0.20em" x="349.9166666666667">17.75</text><text class="small-label legend billable" y="42" x="301.9166666666667">billable</text><text class="small-label legend total" y="42" x="349.9166666666667">total</text><g class="axis" transform="translate(0,24)"><line class="tick minor" y2="6" x2="0" transform="translate(28,0)" style="opacity: 1;"></line><line class="tick minor" y2="6" x2="0" transform="translate(84.00000000000001,0)" style="opacity: 1;"></line><line class="tick minor" y2="6" x2="0" transform="translate(140,0)" style="opacity: 1;"></line><line class="tick minor" y2="6" x2="0" transform="translate(196.00000000000003,0)" style="opacity: 1;"></line><line class="tick minor" y2="6" x2="0" transform="translate(252,0)" style="opacity: 1;"></line><g transform="translate(0,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">0</text></g><g transform="translate(56,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">8</text></g><g transform="translate(112,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">16</text></g><g transform="translate(168.00000000000003,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">24</text></g><g transform="translate(224,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">32</text></g><g transform="translate(280,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">40</text></g><path class="domain" d="M0,6V0H280V6"></path></g></g></g><g class="bullet-graph" transform="translate(89,10)"><g class="quarter" transform="translate(0, 60)"><text class="label utilization" y="12" x="-4">Utilization</text><text class="small-label" y="24" x="-4">this quarter</text><rect class="quarter-utilization-goal" width="280" height="24"></rect><rect class="quarter-co-utilization" height="24" width="243.6"><title>Company-wide utilization this quarter</title></rect><rect class="quarter-utilization" y="8" height="8" width="0"><title>Utilization this quarter</title></rect><text class="numeric-label utilization" y="15" dy="0.20em" x="292">0%</text><g class="axis" transform="translate(0,24)"><g transform="translate(0,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">0</text></g><g transform="translate(70,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">25</text></g><g transform="translate(140,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">50</text></g><g transform="translate(210,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">75</text></g><g transform="translate(280,0)" style="opacity: 1;"><line class="tick" y2="6" x2="0"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">100</text></g><path class="domain" d="M0,6V0H280V6"></path></g></g></g></g></svg></div>
+    <div class="menu">
+                              <a href="./Atomic PunchIt_files/Atomic PunchIt.html">Punch</a>&nbsp;
+                                <a href="https://punchit.atomicobject.com/oppList.php">Sales</a>&nbsp;
+                                <a href="https://punchit.atomicobject.com/admin.php">Admin</a>&nbsp;
+                                <a href="https://punchit.atomicobject.com/report.php">Reports</a>&nbsp;
+                                <a href="https://punchit.atomicobject.com/invoice.php">Invoicing</a>&nbsp;
+                      <a href="https://punchit.atomicobject.com/logout.php">Logout</a>
+            <span id="extension-icons"><img id="watchit-integrated" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKASURBVDjLxVNLTxNRFP7udDp9TCEtFSzloUBwY4FUF0ZjVDYsTDSw0/gjXBii/gk2GjZudO1G4wONK40CGkQSRKTybqGAfVHa6dy5M/d6WwMhccnCk3yLk3u+L9+55xwihMBRQsERQz2crK+vX3Txyn1SyfXDMnyE24AjwR0Q4qLQw1M82H4vGo1+3OeQ/RZSqdQTV2XnhkKzmqaoYJaJQj4P27LgcQGNdTocRmFzyWiJv2zqil0/EJDkt67C0oAGhtTmJpLpHEwSAPNEwBwCy+bQ7W1EsYlYWxiKdMSjvbPhniu96tra2ohmbAxovILZxCq0E5dh6M1g0jllAqYEZRw7lhRp1ZDdewW9tILAykRPingfk9Ti7BbJJ47viiC645cwNm2gYPAaefhWH4TgGB79JoU4vG6Cu0MNyMx/Bv8+hkzJtlWWW27yRfrQ0dhS+4sq0aAOqHQgOK8JGJbMKZf9/h1asPssyv56sBejqupuinEtEHI5jgNFURCuA5JZB6a0fPvBF1BLClbsmoPT7X5wKVqrbWhFqDMmFFHcKLLiNmzbBmMM7WEFAY2jbDCUJbFsMpQkjgUI4ifVWk21lqaXoBQ2mMJ94adi6wes5AxoMYOw7uBcl4JTEQFVULhhId5GcO2MJtuUEykXQRc+gb1/hLTl/VobY2JmctyfnTvvUwlEqCMPvdGEHrKgevj+wlTrxO8VL1+ebLaSc1gwA2kj9bPlYJGmPrx7bm0lrkbIrhrwewFPPbjbj+pzdSPtUh7YXsRqpiT2gp1T9NfEhcGR1zY5fEzjo3c8ud3SIKV0SJrp1wgCLjiS7/CKaU5LPCOcj918+Gb+n1X+b9f4B22tbKhgZZpBAAAAAElFTkSuQmCC" alt="Missing punches"><img id="projtime" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAMESURBVDjLXZNrSFNxGMYPgQQRfYv6EgR9kCgKohtFgRAVQUHQh24GQReqhViWlVYbZJlZmZmombfVpJXTdHa3reM8uszmWpqnmQuX5drmLsdjenR7ev9DR3Xgd3h43+d5/pw/HA4AN9zITSPUhJ14R0xn87+h2ZzJvZVInJpzAQOXQOQMt+/5rvhMCLXv9Vjrt1rSXitmwj+Jua1+Ox+2HfGNdGf6yW8l5sUKPNVcRsiaPDA22Ahv6/7Ae/0aKdviQ0G7B/c6f8Zg+gbfh079Mjno0MhS58lflOsgEjh3BXc+bM/0DzbvDwj314znt/bjof0HdPw3FBq6kP+oCxVNfdDZvqPsrQmf6zdFRtyPJgbrFoqUTeS+FnPrekpmiC2lS+QcUx+qrf0wmFzodYfgC0nwhoYh9oegfdmLsmYXHj7JhV23erS7ZNYHyibGLiLtXsO19BoHSiwu6Ok09gwFg/gy8BO/STOkKFBk7EWh2YkLeh5Hy4Ws2B2w157iDvOpxw4UPRPRTSfL41FIsow7ZeXwUFF4dBQ1L96A/xLEFf1HMC/LxAt25PH+VN0HXH1gh2dEwdBoBGO0OKvW4L7hCdIvavBSsMIRVHCi0ArmZZl4wbYrz/yHSq1Ql9vQLylUEoE7GMal3OuxMG/7CO848N6n4HheK5iXZeIFmy88Nu+8aYJG24G3ziB+0Ee7wwqemlvQ5w9hcAJwyUDtpwBOFLeBeVkmXpB0qlK9RV2HlLsCsvUivHRhQwoQjhCkA1TgJX1OK0JVzIN5WSZesPZ44XKia+P5BqSS4aq+BzZXABLdhyQrsJPOqv4MVcEbMA/zsky8gLHyYO7hI9laecOZWuzLfYXU2zzSblmQerMZqjwTknOeY9dlIw5kVcrMG/8XpoQgCEkOhwNNJn5i7bFSrFDpsCrFEIPpLacr0WxpibYIQpS86/8pMBqNswnJ6XSivqHBv3R3pmbxzgwz4Z+EaTXtwqIogrzjxIJ4QVVV1UyihxgjFv3/K09Bu/lEkBgg5rLZH+fT5dvfn7iFAAAAAElFTkSuQmCC" alt="Project time"></span></div>
+
+    
+    <table cellpadding="7" class="body-table">
+      <tbody><tr>
+
+        <td valign="top">
+          <!-- Allow for non-existence of nav bar -->
+                  </td>
+
+        <td valign="top">
+
+<script type="text/javascript">
+
+
+  // Function to edit punch
+  function editPunch(id){
+    $("#ePunchId").val(id);
+    $("#editPunchForm").submit();
+  }
+
+  // Function to delete punch
+  function deletePunch(id){
+    $("#dPunchId").val(id);
+    $("#deletePunchForm").submit();
+  }
+
+  function resetServices()
+   {
+     // Truncate
+     $('#service-new')[0].options.length = 0;
+     // Force selection of it
+     $('#service-new')[0].selectedIndex = 0;
+
+   }
+
+  // project array
+  var projs = new Array();
+  // story information array, indexed by story id
+  var storyInformation = new Array();
+  var projectServices = new Array();
+
+  function option(storyName, storyId) {
+    return new Option(storyName, storyId, false, false);
+  }
+
+  function checkForServices(projPulldown, selectedIndex)
+  {
+    resetServices();
+    var projId = projPulldown.options[selectedIndex].value;
+    var serviceList = $('#service-new')[0].options;
+
+    
+
+              projectServices[1] = [];
+      
+      
+      projectServices['1']['0'] = option("Software Development", "1");
+                
+      projectServices['1']['1'] = option("Administration", "893");
+                
+      projectServices['1']['2'] = option("Travel", "894");
+                
+      projectServices['1']['3'] = option("Research", "895");
+                
+                projectServices[1042] = [];
+      
+      
+      projectServices['1042']['0'] = option("Software Development", "1074");
+                
+                projectServices[30] = [];
+      
+      
+      projectServices['30']['0'] = option("Software Development", "26");
+                
+          
+        var serviceId = 0;
+    
+    
+
+    var arr = projectServices[projId];
+    if (!arr)
+    {
+      // the given proj has no services
+      serviceList[0] = new Option("(no services)", "null", true,true);
+      serviceList[0].selected = true;
+
+      return;
+    }
+
+    // Populate story pulldown with the Options we built earlier for
+    // this project:
+    for (var i = 0; i < arr.length; i++)
+    {
+      serviceList[i] = arr[i];
+    }
+    // Reset selection to first item
+    for (var i=0; i < serviceList.length; i++) {
+      if (serviceList[i].value == serviceId) {
+        serviceList[i].selected = true;
+        break;
+      }
+    }
+
+  }
+
+  function resetEditServices()
+   {
+     // Truncate
+     $('#service-edit')[0].options.length = 0;
+     // Force selection of it
+     $('#service-edit')[0].selectedIndex = 0;
+
+   }
+
+  function checkForEditServices(projPulldown, selectedIndex)
+  {
+    resetEditServices();
+    var projId = projPulldown.options[selectedIndex].value;
+    var serviceList = $('#service-edit')[0].options;
+
+    
+
+              projectServices[1] = [];
+      
+      
+      projectServices['1']['0'] = option("Software Development", "1");
+                
+      projectServices['1']['1'] = option("Administration", "893");
+                
+      projectServices['1']['2'] = option("Travel", "894");
+                
+      projectServices['1']['3'] = option("Research", "895");
+                
+                projectServices[1042] = [];
+      
+      
+      projectServices['1042']['0'] = option("Software Development", "1074");
+                
+                projectServices[30] = [];
+      
+      
+      projectServices['30']['0'] = option("Software Development", "26");
+                
+          
+        var serviceId = 0;
+    
+    
+
+    var arr = projectServices[projId];
+    if (!arr)
+    {
+
+      // the given proj has no services
+      serviceList[0] = new Option("(no services)", "null", true,true);
+      serviceList[0].selected = true;
+
+      return;
+    }
+
+    // Populate story pulldown with the Options we built earlier for
+    // this project:
+    for (var i = 0; i < arr.length; i++)
+    {
+      serviceList[i] = arr[i];
+    }
+    // Reset selection to first item
+    for (var i=0; i < serviceList.length; i++) {
+      if (serviceList[i].value == serviceId) {
+        serviceList[i].selected = true;
+        break;
+      }
+    }
+
+  }
+
+  /**
+   * Reset the "story" pulldown to a single entry of "choose story",
+   * clearing any existing entries first.
+   */
+  function resetStories()
+  {
+    // Truncate
+    document.forms.addpunch.story.options.length = 0;
+    // Put informative item at index 0
+    document.forms.addpunch.story.options[0] = new Option("Select A Story",-1,true,true);
+    // Force selection of it
+    document.forms.addpunch.story.selectedIndex = 0;
+  }
+
+  function checkForStories(projPulldown, selectedIndex)
+  {
+    resetStories();
+
+    var projId = projPulldown.options[selectedIndex].value;
+
+    var storyList = document.forms.addpunch.story.options;
+
+
+        projs[1] = [];
+      
+      
+                        projs['1']['0'] = option("Accounting and books", "539");
+                              
+                        storyInformation[539] = [];
+        storyInformation[539]['phase'] = "8";
+        storyInformation[539]['loEstimate'] = "0";
+        storyInformation[539]['hiEstimate'] = "0";
+        storyInformation[539]['name'] = "Accounting and books";
+        storyInformation[539]['description'] = "Accounting and books";
+        storyInformation[539]['percentDone'] = "0";
+        storyInformation[539]['serviceId'] = "893";
+                              storyInformation[28539] = [];
+        storyInformation[28539]['phase'] = "5";
+        storyInformation[28539]['loEstimate'] = "0";
+        storyInformation[28539]['hiEstimate'] = "0";
+        storyInformation[28539]['name'] = "AO ownership -  Detroit";
+        storyInformation[28539]['description'] = "";
+        storyInformation[28539]['percentDone'] = "0";
+        storyInformation[28539]['serviceId'] = "1";
+                              storyInformation[20782] = [];
+        storyInformation[20782]['phase'] = "7";
+        storyInformation[20782]['loEstimate'] = "0";
+        storyInformation[20782]['hiEstimate'] = "0";
+        storyInformation[20782]['name'] = "AO ownership - Ascribe";
+        storyInformation[20782]['description'] = "";
+        storyInformation[20782]['percentDone'] = "0";
+        storyInformation[20782]['serviceId'] = "1";
+                              storyInformation[8629] = [];
+        storyInformation[8629]['phase'] = "7";
+        storyInformation[8629]['loEstimate'] = "0";
+        storyInformation[8629]['hiEstimate'] = "0";
+        storyInformation[8629]['name'] = "AO ownership - Blue Medora";
+        storyInformation[8629]['description'] = "";
+        storyInformation[8629]['percentDone'] = "0";
+        storyInformation[8629]['serviceId'] = "1";
+                              storyInformation[12228] = [];
+        storyInformation[12228]['phase'] = "7";
+        storyInformation[12228]['loEstimate'] = "0";
+        storyInformation[12228]['hiEstimate'] = "0";
+        storyInformation[12228]['name'] = "AO ownership - Circle Builder";
+        storyInformation[12228]['description'] = "";
+        storyInformation[12228]['percentDone'] = "0";
+        storyInformation[12228]['serviceId'] = "1";
+                              storyInformation[25749] = [];
+        storyInformation[25749]['phase'] = "7";
+        storyInformation[25749]['loEstimate'] = "0";
+        storyInformation[25749]['hiEstimate'] = "0";
+        storyInformation[25749]['name'] = "AO ownership - Kidtelligent";
+        storyInformation[25749]['description'] = "";
+        storyInformation[25749]['percentDone'] = "0";
+        storyInformation[25749]['serviceId'] = "893";
+                              storyInformation[33137] = [];
+        storyInformation[33137]['phase'] = "7";
+        storyInformation[33137]['loEstimate'] = "0";
+        storyInformation[33137]['hiEstimate'] = "0";
+        storyInformation[33137]['name'] = "AO ownership - ReapSo";
+        storyInformation[33137]['description'] = "";
+        storyInformation[33137]['percentDone'] = "0";
+        storyInformation[33137]['serviceId'] = "1";
+                              storyInformation[492] = [];
+        storyInformation[492]['phase'] = "7";
+        storyInformation[492]['loEstimate'] = "0";
+        storyInformation[492]['hiEstimate'] = "0";
+        storyInformation[492]['name'] = "AO partnership";
+        storyInformation[492]['description'] = "AO partnership";
+        storyInformation[492]['percentDone'] = "0";
+        storyInformation[492]['serviceId'] = "1";
+                              storyInformation[3041] = [];
+        storyInformation[3041]['phase'] = "2";
+        storyInformation[3041]['loEstimate'] = "0";
+        storyInformation[3041]['hiEstimate'] = "0";
+        storyInformation[3041]['name'] = "Blogging";
+        storyInformation[3041]['description'] = "to the AO blog";
+        storyInformation[3041]['percentDone'] = "0";
+        storyInformation[3041]['serviceId'] = "1";
+                        projs['1']['1'] = option("Building and facilities", "537");
+                              
+                        storyInformation[537] = [];
+        storyInformation[537]['phase'] = "8";
+        storyInformation[537]['loEstimate'] = "0";
+        storyInformation[537]['hiEstimate'] = "0";
+        storyInformation[537]['name'] = "Building and facilities";
+        storyInformation[537]['description'] = "Security, facilities, etc";
+        storyInformation[537]['percentDone'] = "0";
+        storyInformation[537]['serviceId'] = "893";
+                              storyInformation[757] = [];
+        storyInformation[757]['phase'] = "5";
+        storyInformation[757]['loEstimate'] = "0";
+        storyInformation[757]['hiEstimate'] = "0";
+        storyInformation[757]['name'] = "Capacity planning";
+        storyInformation[757]['description'] = "";
+        storyInformation[757]['percentDone'] = "0";
+        storyInformation[757]['serviceId'] = "893";
+                              storyInformation[13085] = [];
+        storyInformation[13085]['phase'] = "4";
+        storyInformation[13085]['loEstimate'] = "0";
+        storyInformation[13085]['hiEstimate'] = "0";
+        storyInformation[13085]['name'] = "CB Project Mgmt - Burndown Humility";
+        storyInformation[13085]['description'] = "";
+        storyInformation[13085]['percentDone'] = "0";
+        storyInformation[13085]['serviceId'] = "1";
+                              storyInformation[12921] = [];
+        storyInformation[12921]['phase'] = "4";
+        storyInformation[12921]['loEstimate'] = "0";
+        storyInformation[12921]['hiEstimate'] = "0";
+        storyInformation[12921]['name'] = "Chrysler Cleanup";
+        storyInformation[12921]['description'] = "Getting stuff back to Chrysler.";
+        storyInformation[12921]['percentDone'] = "0";
+        storyInformation[12921]['serviceId'] = "1";
+                              storyInformation[9171] = [];
+        storyInformation[9171]['phase'] = "5";
+        storyInformation[9171]['loEstimate'] = "0";
+        storyInformation[9171]['hiEstimate'] = "0";
+        storyInformation[9171]['name'] = "Cleanup";
+        storyInformation[9171]['description'] = "cleaning up your own or other peoples\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\' messes in the office";
+        storyInformation[9171]['percentDone'] = "0";
+        storyInformation[9171]['serviceId'] = "893";
+                        projs['1']['2'] = option("Company meeting", "4669");
+                              
+                        storyInformation[4669] = [];
+        storyInformation[4669]['phase'] = "8";
+        storyInformation[4669]['loEstimate'] = "0";
+        storyInformation[4669]['hiEstimate'] = "0";
+        storyInformation[4669]['name'] = "Company meeting";
+        storyInformation[4669]['description'] = "";
+        storyInformation[4669]['percentDone'] = "0";
+        storyInformation[4669]['serviceId'] = "893";
+                        projs['1']['3'] = option("Company policies, benefits", "484");
+                              
+                        storyInformation[484] = [];
+        storyInformation[484]['phase'] = "8";
+        storyInformation[484]['loEstimate'] = "0";
+        storyInformation[484]['hiEstimate'] = "0";
+        storyInformation[484]['name'] = "Company policies, benefits";
+        storyInformation[484]['description'] = "Company policies, benefits";
+        storyInformation[484]['percentDone'] = "0";
+        storyInformation[484]['serviceId'] = "893";
+                        projs['1']['4'] = option("Customer relationships", "481");
+                              
+                        storyInformation[481] = [];
+        storyInformation[481]['phase'] = "8";
+        storyInformation[481]['loEstimate'] = "0";
+        storyInformation[481]['hiEstimate'] = "0";
+        storyInformation[481]['name'] = "Customer relationships";
+        storyInformation[481]['description'] = "Customer relationships";
+        storyInformation[481]['percentDone'] = "0";
+        storyInformation[481]['serviceId'] = "1";
+                        projs['1']['5'] = option("Design Methods", "34482");
+                              
+                        storyInformation[34482] = [];
+        storyInformation[34482]['phase'] = "8";
+        storyInformation[34482]['loEstimate'] = "0";
+        storyInformation[34482]['hiEstimate'] = "0";
+        storyInformation[34482]['name'] = "Design Methods";
+        storyInformation[34482]['description'] = "";
+        storyInformation[34482]['percentDone'] = "0";
+        storyInformation[34482]['serviceId'] = "1";
+                        projs['1']['6'] = option("Email", "480");
+                              
+                        storyInformation[480] = [];
+        storyInformation[480]['phase'] = "8";
+        storyInformation[480]['loEstimate'] = "0";
+        storyInformation[480]['hiEstimate'] = "0";
+        storyInformation[480]['name'] = "Email";
+        storyInformation[480]['description'] = "Email";
+        storyInformation[480]['percentDone'] = "0";
+        storyInformation[480]['serviceId'] = "893";
+                        projs['1']['7'] = option("Employee stuff", "490");
+                              
+                        storyInformation[490] = [];
+        storyInformation[490]['phase'] = "8";
+        storyInformation[490]['loEstimate'] = "0";
+        storyInformation[490]['hiEstimate'] = "0";
+        storyInformation[490]['name'] = "Employee stuff";
+        storyInformation[490]['description'] = "Managing employee issues";
+        storyInformation[490]['percentDone'] = "0";
+        storyInformation[490]['serviceId'] = "893";
+                              storyInformation[27616] = [];
+        storyInformation[27616]['phase'] = "5";
+        storyInformation[27616]['loEstimate'] = "0";
+        storyInformation[27616]['hiEstimate'] = "0";
+        storyInformation[27616]['name'] = "Evaluations";
+        storyInformation[27616]['description'] = "";
+        storyInformation[27616]['percentDone'] = "0";
+        storyInformation[27616]['serviceId'] = "1";
+                        projs['1']['8'] = option("Evaluations", "32097");
+                              
+                        storyInformation[32097] = [];
+        storyInformation[32097]['phase'] = "8";
+        storyInformation[32097]['loEstimate'] = "0";
+        storyInformation[32097]['hiEstimate'] = "0";
+        storyInformation[32097]['name'] = "Evaluations";
+        storyInformation[32097]['description'] = "";
+        storyInformation[32097]['percentDone'] = "0";
+        storyInformation[32097]['serviceId'] = "895";
+                        projs['1']['9'] = option("Event Planning", "33850");
+                              
+                        storyInformation[33850] = [];
+        storyInformation[33850]['phase'] = "8";
+        storyInformation[33850]['loEstimate'] = "0";
+        storyInformation[33850]['hiEstimate'] = "0";
+        storyInformation[33850]['name'] = "Event Planning";
+        storyInformation[33850]['description'] = "";
+        storyInformation[33850]['percentDone'] = "0";
+        storyInformation[33850]['serviceId'] = "1";
+                              storyInformation[483] = [];
+        storyInformation[483]['phase'] = "5";
+        storyInformation[483]['loEstimate'] = "0";
+        storyInformation[483]['hiEstimate'] = "0";
+        storyInformation[483]['name'] = "Financial analysis";
+        storyInformation[483]['description'] = "Financial analysis";
+        storyInformation[483]['percentDone'] = "0";
+        storyInformation[483]['serviceId'] = "893";
+                              storyInformation[5891] = [];
+        storyInformation[5891]['phase'] = "2";
+        storyInformation[5891]['loEstimate'] = "0";
+        storyInformation[5891]['hiEstimate'] = "0";
+        storyInformation[5891]['name'] = "Hating RMP";
+        storyInformation[5891]['description'] = "";
+        storyInformation[5891]['percentDone'] = "0";
+        storyInformation[5891]['serviceId'] = "1";
+                              storyInformation[28291] = [];
+        storyInformation[28291]['phase'] = "5";
+        storyInformation[28291]['loEstimate'] = "0";
+        storyInformation[28291]['hiEstimate'] = "0";
+        storyInformation[28291]['name'] = "Incoming Call";
+        storyInformation[28291]['description'] = "";
+        storyInformation[28291]['percentDone'] = "0";
+        storyInformation[28291]['serviceId'] = "1";
+                              storyInformation[4705] = [];
+        storyInformation[4705]['phase'] = "2";
+        storyInformation[4705]['loEstimate'] = "0";
+        storyInformation[4705]['hiEstimate'] = "0";
+        storyInformation[4705]['name'] = "Instant messaging";
+        storyInformation[4705]['description'] = "";
+        storyInformation[4705]['percentDone'] = "0";
+        storyInformation[4705]['serviceId'] = "1";
+                        projs['1']['10'] = option("Internal business processes", "637");
+                              
+                        storyInformation[637] = [];
+        storyInformation[637]['phase'] = "8";
+        storyInformation[637]['loEstimate'] = "0";
+        storyInformation[637]['hiEstimate'] = "0";
+        storyInformation[637]['name'] = "Internal business processes";
+        storyInformation[637]['description'] = "";
+        storyInformation[637]['percentDone'] = "0";
+        storyInformation[637]['serviceId'] = "893";
+                              storyInformation[11193] = [];
+        storyInformation[11193]['phase'] = "4";
+        storyInformation[11193]['loEstimate'] = "0";
+        storyInformation[11193]['hiEstimate'] = "0";
+        storyInformation[11193]['name'] = "Internet Down";
+        storyInformation[11193]['description'] = "";
+        storyInformation[11193]['percentDone'] = "0";
+        storyInformation[11193]['serviceId'] = "1";
+                        projs['1']['11'] = option("Internship management", "17720");
+                              
+                        storyInformation[17720] = [];
+        storyInformation[17720]['phase'] = "8";
+        storyInformation[17720]['loEstimate'] = "0";
+        storyInformation[17720]['hiEstimate'] = "0";
+        storyInformation[17720]['name'] = "Internship management";
+        storyInformation[17720]['description'] = "";
+        storyInformation[17720]['percentDone'] = "0";
+        storyInformation[17720]['serviceId'] = "1";
+                              storyInformation[4517] = [];
+        storyInformation[4517]['phase'] = "2";
+        storyInformation[4517]['loEstimate'] = "0";
+        storyInformation[4517]['hiEstimate'] = "0";
+        storyInformation[4517]['name'] = "Interviews";
+        storyInformation[4517]['description'] = "";
+        storyInformation[4517]['percentDone'] = "0";
+        storyInformation[4517]['serviceId'] = "1";
+                        projs['1']['12'] = option("Interviews, hiring and recruiting", "2029");
+                              
+                        storyInformation[2029] = [];
+        storyInformation[2029]['phase'] = "8";
+        storyInformation[2029]['loEstimate'] = "0";
+        storyInformation[2029]['hiEstimate'] = "0";
+        storyInformation[2029]['name'] = "Interviews, hiring and recruiting";
+        storyInformation[2029]['description'] = "";
+        storyInformation[2029]['percentDone'] = "0";
+        storyInformation[2029]['serviceId'] = "893";
+                        projs['1']['13'] = option("Introspection", "950");
+                              
+                        storyInformation[950] = [];
+        storyInformation[950]['phase'] = "8";
+        storyInformation[950]['loEstimate'] = "0";
+        storyInformation[950]['hiEstimate'] = "0";
+        storyInformation[950]['name'] = "Introspection";
+        storyInformation[950]['description'] = "Lessons learned, company reflection, process introspection.";
+        storyInformation[950]['percentDone'] = "0";
+        storyInformation[950]['serviceId'] = "895";
+                        projs['1']['14'] = option("Invoices", "479");
+                              
+                        storyInformation[479] = [];
+        storyInformation[479]['phase'] = "8";
+        storyInformation[479]['loEstimate'] = "0";
+        storyInformation[479]['hiEstimate'] = "0";
+        storyInformation[479]['name'] = "Invoices";
+        storyInformation[479]['description'] = "Hours and Invoices";
+        storyInformation[479]['percentDone'] = "0";
+        storyInformation[479]['serviceId'] = "893";
+                        projs['1']['15'] = option("Letters of rec, references", "7482");
+                              
+                        storyInformation[7482] = [];
+        storyInformation[7482]['phase'] = "8";
+        storyInformation[7482]['loEstimate'] = "0";
+        storyInformation[7482]['hiEstimate'] = "0";
+        storyInformation[7482]['name'] = "Letters of rec, references";
+        storyInformation[7482]['description'] = "";
+        storyInformation[7482]['percentDone'] = "0";
+        storyInformation[7482]['serviceId'] = "893";
+                              storyInformation[3404] = [];
+        storyInformation[3404]['phase'] = "2";
+        storyInformation[3404]['loEstimate'] = "0";
+        storyInformation[3404]['hiEstimate'] = "0";
+        storyInformation[3404]['name'] = "LLSD";
+        storyInformation[3404]['description'] = "";
+        storyInformation[3404]['percentDone'] = "0";
+        storyInformation[3404]['serviceId'] = "1";
+                              storyInformation[27748] = [];
+        storyInformation[27748]['phase'] = "5";
+        storyInformation[27748]['loEstimate'] = "0";
+        storyInformation[27748]['hiEstimate'] = "0";
+        storyInformation[27748]['name'] = "MEGA";
+        storyInformation[27748]['description'] = "";
+        storyInformation[27748]['percentDone'] = "0";
+        storyInformation[27748]['serviceId'] = "1";
+                              storyInformation[29685] = [];
+        storyInformation[29685]['phase'] = "6";
+        storyInformation[29685]['loEstimate'] = "0";
+        storyInformation[29685]['hiEstimate'] = "0";
+        storyInformation[29685]['name'] = "Mega Grant";
+        storyInformation[29685]['description'] = "";
+        storyInformation[29685]['percentDone'] = "0";
+        storyInformation[29685]['serviceId'] = "1";
+                              storyInformation[486] = [];
+        storyInformation[486]['phase'] = "2";
+        storyInformation[486]['loEstimate'] = "0";
+        storyInformation[486]['hiEstimate'] = "0";
+        storyInformation[486]['name'] = "Miscellaneous";
+        storyInformation[486]['description'] = "Miscellaneous";
+        storyInformation[486]['percentDone'] = "0";
+        storyInformation[486]['serviceId'] = "1";
+                        projs['1']['16'] = option("Movie Day", "33043");
+                              
+                        storyInformation[33043] = [];
+        storyInformation[33043]['phase'] = "8";
+        storyInformation[33043]['loEstimate'] = "0";
+        storyInformation[33043]['hiEstimate'] = "0";
+        storyInformation[33043]['name'] = "Movie Day";
+        storyInformation[33043]['description'] = "";
+        storyInformation[33043]['percentDone'] = "0";
+        storyInformation[33043]['serviceId'] = "1";
+                              storyInformation[509] = [];
+        storyInformation[509]['phase'] = "2";
+        storyInformation[509]['loEstimate'] = "0";
+        storyInformation[509]['hiEstimate'] = "0";
+        storyInformation[509]['name'] = "Networking, business meetings";
+        storyInformation[509]['description'] = "4th Friday, etc";
+        storyInformation[509]['percentDone'] = "0";
+        storyInformation[509]['serviceId'] = "1";
+                              storyInformation[482] = [];
+        storyInformation[482]['phase'] = "0";
+        storyInformation[482]['loEstimate'] = "0";
+        storyInformation[482]['hiEstimate'] = "0";
+        storyInformation[482]['name'] = "Potential partners";
+        storyInformation[482]['description'] = "Potential partners";
+        storyInformation[482]['percentDone'] = "0";
+        storyInformation[482]['serviceId'] = "1";
+                              storyInformation[14464] = [];
+        storyInformation[14464]['phase'] = "5";
+        storyInformation[14464]['loEstimate'] = "0";
+        storyInformation[14464]['hiEstimate'] = "0";
+        storyInformation[14464]['name'] = "Product development strategy";
+        storyInformation[14464]['description'] = "";
+        storyInformation[14464]['percentDone'] = "0";
+        storyInformation[14464]['serviceId'] = "1";
+                              storyInformation[6686] = [];
+        storyInformation[6686]['phase'] = "2";
+        storyInformation[6686]['loEstimate'] = "0";
+        storyInformation[6686]['hiEstimate'] = "0";
+        storyInformation[6686]['name'] = "Prof Dev Planning";
+        storyInformation[6686]['description'] = "";
+        storyInformation[6686]['percentDone'] = "0";
+        storyInformation[6686]['serviceId'] = "1";
+                              storyInformation[489] = [];
+        storyInformation[489]['phase'] = "5";
+        storyInformation[489]['loEstimate'] = "0";
+        storyInformation[489]['hiEstimate'] = "0";
+        storyInformation[489]['name'] = "Project status - Carl/Shawn/Mike";
+        storyInformation[489]['description'] = "Monitoring projects, status, progress, etc.";
+        storyInformation[489]['percentDone'] = "0";
+        storyInformation[489]['serviceId'] = "893";
+                              storyInformation[520] = [];
+        storyInformation[520]['phase'] = "3";
+        storyInformation[520]['loEstimate'] = "0";
+        storyInformation[520]['hiEstimate'] = "0";
+        storyInformation[520]['name'] = "Punching";
+        storyInformation[520]['description'] = "Punching";
+        storyInformation[520]['percentDone'] = "0";
+        storyInformation[520]['serviceId'] = "1";
+                              storyInformation[21228] = [];
+        storyInformation[21228]['phase'] = "5";
+        storyInformation[21228]['loEstimate'] = "0";
+        storyInformation[21228]['hiEstimate'] = "0";
+        storyInformation[21228]['name'] = "Quick Reviews";
+        storyInformation[21228]['description'] = "";
+        storyInformation[21228]['percentDone'] = "0";
+        storyInformation[21228]['serviceId'] = "893";
+                              storyInformation[13579] = [];
+        storyInformation[13579]['phase'] = "4";
+        storyInformation[13579]['loEstimate'] = "0";
+        storyInformation[13579]['hiEstimate'] = "0";
+        storyInformation[13579]['name'] = "Reading, benchmarking, general research";
+        storyInformation[13579]['description'] = "";
+        storyInformation[13579]['percentDone'] = "0";
+        storyInformation[13579]['serviceId'] = "1";
+                        projs['1']['17'] = option("Reading, paper mail", "498");
+                              
+                        storyInformation[498] = [];
+        storyInformation[498]['phase'] = "8";
+        storyInformation[498]['loEstimate'] = "0";
+        storyInformation[498]['hiEstimate'] = "0";
+        storyInformation[498]['name'] = "Reading, paper mail";
+        storyInformation[498]['description'] = "Reading";
+        storyInformation[498]['percentDone'] = "0";
+        storyInformation[498]['serviceId'] = "893";
+                        projs['1']['18'] = option("Retrospectives", "20588");
+                              
+                        storyInformation[20588] = [];
+        storyInformation[20588]['phase'] = "8";
+        storyInformation[20588]['loEstimate'] = "0";
+        storyInformation[20588]['hiEstimate'] = "0";
+        storyInformation[20588]['name'] = "Retrospectives";
+        storyInformation[20588]['description'] = "";
+        storyInformation[20588]['percentDone'] = "0";
+        storyInformation[20588]['serviceId'] = "893";
+                              storyInformation[23890] = [];
+        storyInformation[23890]['phase'] = "5";
+        storyInformation[23890]['loEstimate'] = "0";
+        storyInformation[23890]['hiEstimate'] = "0";
+        storyInformation[23890]['name'] = "SBIR Grant";
+        storyInformation[23890]['description'] = "";
+        storyInformation[23890]['percentDone'] = "0";
+        storyInformation[23890]['serviceId'] = "1";
+                        projs['1']['19'] = option("Snack-making", "33080");
+                              
+                        storyInformation[33080] = [];
+        storyInformation[33080]['phase'] = "8";
+        storyInformation[33080]['loEstimate'] = "0";
+        storyInformation[33080]['hiEstimate'] = "0";
+        storyInformation[33080]['name'] = "Snack-making";
+        storyInformation[33080]['description'] = "";
+        storyInformation[33080]['percentDone'] = "0";
+        storyInformation[33080]['serviceId'] = "1";
+                              storyInformation[27576] = [];
+        storyInformation[27576]['phase'] = "5";
+        storyInformation[27576]['loEstimate'] = "0";
+        storyInformation[27576]['hiEstimate'] = "0";
+        storyInformation[27576]['name'] = "Snow Removal";
+        storyInformation[27576]['description'] = "";
+        storyInformation[27576]['percentDone'] = "0";
+        storyInformation[27576]['serviceId'] = "1";
+                        projs['1']['20'] = option("Software Installation", "23743");
+                              
+                        storyInformation[23743] = [];
+        storyInformation[23743]['phase'] = "8";
+        storyInformation[23743]['loEstimate'] = "0";
+        storyInformation[23743]['hiEstimate'] = "0";
+        storyInformation[23743]['name'] = "Software Installation";
+        storyInformation[23743]['description'] = "";
+        storyInformation[23743]['percentDone'] = "0";
+        storyInformation[23743]['serviceId'] = "893";
+                              storyInformation[519] = [];
+        storyInformation[519]['phase'] = "2";
+        storyInformation[519]['loEstimate'] = "0";
+        storyInformation[519]['hiEstimate'] = "0";
+        storyInformation[519]['name'] = "Speaking";
+        storyInformation[519]['description'] = "Speaking";
+        storyInformation[519]['percentDone'] = "0";
+        storyInformation[519]['serviceId'] = "1";
+                              storyInformation[29743] = [];
+        storyInformation[29743]['phase'] = "6";
+        storyInformation[29743]['loEstimate'] = "0";
+        storyInformation[29743]['hiEstimate'] = "0";
+        storyInformation[29743]['name'] = "Strategic Facilities Planning";
+        storyInformation[29743]['description'] = "";
+        storyInformation[29743]['percentDone'] = "0";
+        storyInformation[29743]['serviceId'] = "893";
+                              storyInformation[10759] = [];
+        storyInformation[10759]['phase'] = "5";
+        storyInformation[10759]['loEstimate'] = "0";
+        storyInformation[10759]['hiEstimate'] = "0";
+        storyInformation[10759]['name'] = "Strategic planning";
+        storyInformation[10759]['description'] = "replaced the old \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\'s and t planning\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\' story";
+        storyInformation[10759]['percentDone'] = "0";
+        storyInformation[10759]['serviceId'] = "893";
+                              storyInformation[5508] = [];
+        storyInformation[5508]['phase'] = "2";
+        storyInformation[5508]['loEstimate'] = "0";
+        storyInformation[5508]['hiEstimate'] = "0";
+        storyInformation[5508]['name'] = "Systir";
+        storyInformation[5508]['description'] = "";
+        storyInformation[5508]['percentDone'] = "0";
+        storyInformation[5508]['serviceId'] = "1";
+                              storyInformation[608] = [];
+        storyInformation[608]['phase'] = "5";
+        storyInformation[608]['loEstimate'] = "0";
+        storyInformation[608]['hiEstimate'] = "0";
+        storyInformation[608]['name'] = "TAB";
+        storyInformation[608]['description'] = "TAB meetings, counseling";
+        storyInformation[608]['percentDone'] = "0";
+        storyInformation[608]['serviceId'] = "1";
+                        projs['1']['21'] = option("Task and todo organization", "485");
+                              
+                        storyInformation[485] = [];
+        storyInformation[485]['phase'] = "8";
+        storyInformation[485]['loEstimate'] = "0";
+        storyInformation[485]['hiEstimate'] = "0";
+        storyInformation[485]['name'] = "Task and todo organization";
+        storyInformation[485]['description'] = "Task and todo organization";
+        storyInformation[485]['percentDone'] = "0";
+        storyInformation[485]['serviceId'] = "893";
+                              storyInformation[7193] = [];
+        storyInformation[7193]['phase'] = "2";
+        storyInformation[7193]['loEstimate'] = "0";
+        storyInformation[7193]['hiEstimate'] = "0";
+        storyInformation[7193]['name'] = "Tax analysis";
+        storyInformation[7193]['description'] = "";
+        storyInformation[7193]['percentDone'] = "0";
+        storyInformation[7193]['serviceId'] = "1";
+                              storyInformation[7194] = [];
+        storyInformation[7194]['phase'] = "6";
+        storyInformation[7194]['loEstimate'] = "0";
+        storyInformation[7194]['hiEstimate'] = "0";
+        storyInformation[7194]['name'] = "Tax, Legal, Insurance";
+        storyInformation[7194]['description'] = "";
+        storyInformation[7194]['percentDone'] = "0";
+        storyInformation[7194]['serviceId'] = "893";
+                              storyInformation[32075] = [];
+        storyInformation[32075]['phase'] = "6";
+        storyInformation[32075]['loEstimate'] = "0";
+        storyInformation[32075]['hiEstimate'] = "0";
+        storyInformation[32075]['name'] = "Tools Day";
+        storyInformation[32075]['description'] = "";
+        storyInformation[32075]['percentDone'] = "0";
+        storyInformation[32075]['serviceId'] = "1";
+                        projs['1']['22'] = option("Travel for projects", "510");
+                              
+                        storyInformation[510] = [];
+        storyInformation[510]['phase'] = "8";
+        storyInformation[510]['loEstimate'] = "0";
+        storyInformation[510]['hiEstimate'] = "0";
+        storyInformation[510]['name'] = "Travel for projects";
+        storyInformation[510]['description'] = "Travel";
+        storyInformation[510]['percentDone'] = "0";
+        storyInformation[510]['serviceId'] = "894";
+                        projs['1']['23'] = option("Travel Planning", "27262");
+                              
+                        storyInformation[27262] = [];
+        storyInformation[27262]['phase'] = "8";
+        storyInformation[27262]['loEstimate'] = "0";
+        storyInformation[27262]['hiEstimate'] = "0";
+        storyInformation[27262]['name'] = "Travel Planning";
+        storyInformation[27262]['description'] = "";
+        storyInformation[27262]['percentDone'] = "0";
+        storyInformation[27262]['serviceId'] = "1";
+                              storyInformation[29653] = [];
+        storyInformation[29653]['phase'] = "6";
+        storyInformation[29653]['loEstimate'] = "0";
+        storyInformation[29653]['hiEstimate'] = "0";
+        storyInformation[29653]['name'] = "Usability initiative";
+        storyInformation[29653]['description'] = "";
+        storyInformation[29653]['percentDone'] = "0";
+        storyInformation[29653]['serviceId'] = "1";
+                        projs['1']['24'] = option("Vehicles", "6076");
+                              
+                        storyInformation[6076] = [];
+        storyInformation[6076]['phase'] = "8";
+        storyInformation[6076]['loEstimate'] = "0";
+        storyInformation[6076]['hiEstimate'] = "0";
+        storyInformation[6076]['name'] = "Vehicles";
+        storyInformation[6076]['description'] = "";
+        storyInformation[6076]['percentDone'] = "0";
+        storyInformation[6076]['serviceId'] = "1";
+                              storyInformation[6337] = [];
+        storyInformation[6337]['phase'] = "2";
+        storyInformation[6337]['loEstimate'] = "0";
+        storyInformation[6337]['hiEstimate'] = "0";
+        storyInformation[6337]['name'] = "VividVue Admin";
+        storyInformation[6337]['description'] = "for Carl and Bill at non-billable monthly meetings";
+        storyInformation[6337]['percentDone'] = "0";
+        storyInformation[6337]['serviceId'] = "1";
+                              storyInformation[754] = [];
+        storyInformation[754]['phase'] = "1";
+        storyInformation[754]['loEstimate'] = "0";
+        storyInformation[754]['hiEstimate'] = "0";
+        storyInformation[754]['name'] = "Writing";
+        storyInformation[754]['description'] = "";
+        storyInformation[754]['percentDone'] = "0";
+        storyInformation[754]['serviceId'] = "1";
+                              storyInformation[29221] = [];
+        storyInformation[29221]['phase'] = "5";
+        storyInformation[29221]['loEstimate'] = "0";
+        storyInformation[29221]['hiEstimate'] = "0";
+        storyInformation[29221]['name'] = "WTF Ascribe";
+        storyInformation[29221]['description'] = "";
+        storyInformation[29221]['percentDone'] = "0";
+        storyInformation[29221]['serviceId'] = "1";
+                              storyInformation[30183] = [];
+        storyInformation[30183]['phase'] = "6";
+        storyInformation[30183]['loEstimate'] = "0";
+        storyInformation[30183]['hiEstimate'] = "0";
+        storyInformation[30183]['name'] = "AO ownership - AE";
+        storyInformation[30183]['description'] = "";
+        storyInformation[30183]['percentDone'] = "100";
+        storyInformation[30183]['serviceId'] = "1";
+                              storyInformation[17899] = [];
+        storyInformation[17899]['phase'] = "5";
+        storyInformation[17899]['loEstimate'] = "0";
+        storyInformation[17899]['hiEstimate'] = "0";
+        storyInformation[17899]['name'] = "AO ownership - AppMatic";
+        storyInformation[17899]['description'] = "";
+        storyInformation[17899]['percentDone'] = "100";
+        storyInformation[17899]['serviceId'] = "1";
+                              storyInformation[27374] = [];
+        storyInformation[27374]['phase'] = "5";
+        storyInformation[27374]['loEstimate'] = "0";
+        storyInformation[27374]['hiEstimate'] = "0";
+        storyInformation[27374]['name'] = "AO ownership - Atomic Embedded";
+        storyInformation[27374]['description'] = "";
+        storyInformation[27374]['percentDone'] = "100";
+        storyInformation[27374]['serviceId'] = "1";
+                              storyInformation[7278] = [];
+        storyInformation[7278]['phase'] = "5";
+        storyInformation[7278]['loEstimate'] = "0";
+        storyInformation[7278]['hiEstimate'] = "0";
+        storyInformation[7278]['name'] = "AO ownership - Crane Logic";
+        storyInformation[7278]['description'] = "";
+        storyInformation[7278]['percentDone'] = "100";
+        storyInformation[7278]['serviceId'] = "1";
+                              storyInformation[27598] = [];
+        storyInformation[27598]['phase'] = "6";
+        storyInformation[27598]['loEstimate'] = "0";
+        storyInformation[27598]['hiEstimate'] = "0";
+        storyInformation[27598]['name'] = "AO ownership - Duellr";
+        storyInformation[27598]['description'] = "";
+        storyInformation[27598]['percentDone'] = "100";
+        storyInformation[27598]['serviceId'] = "1";
+                              storyInformation[836] = [];
+        storyInformation[836]['phase'] = "5";
+        storyInformation[836]['loEstimate'] = "0";
+        storyInformation[836]['hiEstimate'] = "0";
+        storyInformation[836]['name'] = "AO ownership - MDC";
+        storyInformation[836]['description'] = "This is only for Carls time on MDC.";
+        storyInformation[836]['percentDone'] = "100";
+        storyInformation[836]['serviceId'] = "1";
+                              storyInformation[17165] = [];
+        storyInformation[17165]['phase'] = "5";
+        storyInformation[17165]['loEstimate'] = "0";
+        storyInformation[17165]['hiEstimate'] = "0";
+        storyInformation[17165]['name'] = "AO ownership - Medical Services";
+        storyInformation[17165]['description'] = "";
+        storyInformation[17165]['percentDone'] = "100";
+        storyInformation[17165]['serviceId'] = "1";
+                              storyInformation[15522] = [];
+        storyInformation[15522]['phase'] = "5";
+        storyInformation[15522]['loEstimate'] = "0";
+        storyInformation[15522]['hiEstimate'] = "0";
+        storyInformation[15522]['name'] = "AO ownership - ObitSource";
+        storyInformation[15522]['description'] = "";
+        storyInformation[15522]['percentDone'] = "100";
+        storyInformation[15522]['serviceId'] = "1";
+                              storyInformation[8279] = [];
+        storyInformation[8279]['phase'] = "4";
+        storyInformation[8279]['loEstimate'] = "0";
+        storyInformation[8279]['hiEstimate'] = "0";
+        storyInformation[8279]['name'] = "AO ownership - PitchCrafter";
+        storyInformation[8279]['description'] = "";
+        storyInformation[8279]['percentDone'] = "100";
+        storyInformation[8279]['serviceId'] = "1";
+                              storyInformation[10007] = [];
+        storyInformation[10007]['phase'] = "5";
+        storyInformation[10007]['loEstimate'] = "0";
+        storyInformation[10007]['hiEstimate'] = "0";
+        storyInformation[10007]['name'] = "AO ownership - Realius";
+        storyInformation[10007]['description'] = "";
+        storyInformation[10007]['percentDone'] = "100";
+        storyInformation[10007]['serviceId'] = "1";
+                              storyInformation[17119] = [];
+        storyInformation[17119]['phase'] = "5";
+        storyInformation[17119]['loEstimate'] = "0";
+        storyInformation[17119]['hiEstimate'] = "0";
+        storyInformation[17119]['name'] = "AO ownership - Six Voices";
+        storyInformation[17119]['description'] = "";
+        storyInformation[17119]['percentDone'] = "100";
+        storyInformation[17119]['serviceId'] = "1";
+                              storyInformation[15491] = [];
+        storyInformation[15491]['phase'] = "5";
+        storyInformation[15491]['loEstimate'] = "0";
+        storyInformation[15491]['hiEstimate'] = "0";
+        storyInformation[15491]['name'] = "AO ownership - Uladoo";
+        storyInformation[15491]['description'] = "";
+        storyInformation[15491]['percentDone'] = "100";
+        storyInformation[15491]['serviceId'] = "1";
+                              storyInformation[491] = [];
+        storyInformation[491]['phase'] = "1";
+        storyInformation[491]['loEstimate'] = "0";
+        storyInformation[491]['hiEstimate'] = "0";
+        storyInformation[491]['name'] = "Asterisk";
+        storyInformation[491]['description'] = "Working on the software PBX";
+        storyInformation[491]['percentDone'] = "100";
+        storyInformation[491]['serviceId'] = "1";
+                              storyInformation[26919] = [];
+        storyInformation[26919]['phase'] = "5";
+        storyInformation[26919]['loEstimate'] = "0";
+        storyInformation[26919]['hiEstimate'] = "0";
+        storyInformation[26919]['name'] = "Cronyism";
+        storyInformation[26919]['description'] = "";
+        storyInformation[26919]['percentDone'] = "100";
+        storyInformation[26919]['serviceId'] = "1";
+                              storyInformation[29697] = [];
+        storyInformation[29697]['phase'] = "6";
+        storyInformation[29697]['loEstimate'] = "0";
+        storyInformation[29697]['hiEstimate'] = "0";
+        storyInformation[29697]['name'] = "Design Sync-Up  / AO 2.0 Reloaded";
+        storyInformation[29697]['description'] = "";
+        storyInformation[29697]['percentDone'] = "100";
+        storyInformation[29697]['serviceId'] = "1";
+                              storyInformation[835] = [];
+        storyInformation[835]['phase'] = "1";
+        storyInformation[835]['loEstimate'] = "0";
+        storyInformation[835]['hiEstimate'] = "0";
+        storyInformation[835]['name'] = "Facilities";
+        storyInformation[835]['description'] = "";
+        storyInformation[835]['percentDone'] = "100";
+        storyInformation[835]['serviceId'] = "1";
+                              storyInformation[26337] = [];
+        storyInformation[26337]['phase'] = "5";
+        storyInformation[26337]['loEstimate'] = "0";
+        storyInformation[26337]['hiEstimate'] = "0";
+        storyInformation[26337]['name'] = "Gentex Penance";
+        storyInformation[26337]['description'] = "Making up for potentially running over budget due to problems installing ubuntu desktop.";
+        storyInformation[26337]['percentDone'] = "100";
+        storyInformation[26337]['serviceId'] = "1";
+                              storyInformation[15022] = [];
+        storyInformation[15022]['phase'] = "5";
+        storyInformation[15022]['loEstimate'] = "0";
+        storyInformation[15022]['hiEstimate'] = "0";
+        storyInformation[15022]['name'] = "iPhone Developer Enrollment";
+        storyInformation[15022]['description'] = "";
+        storyInformation[15022]['percentDone'] = "100";
+        storyInformation[15022]['serviceId'] = "893";
+                              storyInformation[2851] = [];
+        storyInformation[2851]['phase'] = "1";
+        storyInformation[2851]['loEstimate'] = "0";
+        storyInformation[2851]['hiEstimate'] = "0";
+        storyInformation[2851]['name'] = "Marketing - General";
+        storyInformation[2851]['description'] = "";
+        storyInformation[2851]['percentDone'] = "100";
+        storyInformation[2851]['serviceId'] = "1";
+                              storyInformation[13348] = [];
+        storyInformation[13348]['phase'] = "5";
+        storyInformation[13348]['loEstimate'] = "0";
+        storyInformation[13348]['hiEstimate'] = "0";
+        storyInformation[13348]['name'] = "Nucleus";
+        storyInformation[13348]['description'] = "Maintaining, publishing or otherwise working on the Atomic Nucleus internal blog.";
+        storyInformation[13348]['percentDone'] = "100";
+        storyInformation[13348]['serviceId'] = "1";
+                              storyInformation[758] = [];
+        storyInformation[758]['phase'] = "1";
+        storyInformation[758]['loEstimate'] = "0";
+        storyInformation[758]['hiEstimate'] = "0";
+        storyInformation[758]['name'] = "Office equipment";
+        storyInformation[758]['description'] = "";
+        storyInformation[758]['percentDone'] = "100";
+        storyInformation[758]['serviceId'] = "1";
+                              storyInformation[22992] = [];
+        storyInformation[22992]['phase'] = "5";
+        storyInformation[22992]['loEstimate'] = "0";
+        storyInformation[22992]['hiEstimate'] = "0";
+        storyInformation[22992]['name'] = "Owners Meeting";
+        storyInformation[22992]['description'] = "";
+        storyInformation[22992]['percentDone'] = "100";
+        storyInformation[22992]['serviceId'] = "1";
+                              storyInformation[18212] = [];
+        storyInformation[18212]['phase'] = "5";
+        storyInformation[18212]['loEstimate'] = "0";
+        storyInformation[18212]['hiEstimate'] = "0";
+        storyInformation[18212]['name'] = "Physical mail";
+        storyInformation[18212]['description'] = "";
+        storyInformation[18212]['percentDone'] = "100";
+        storyInformation[18212]['serviceId'] = "1";
+                              storyInformation[495] = [];
+        storyInformation[495]['phase'] = "1";
+        storyInformation[495]['loEstimate'] = "0";
+        storyInformation[495]['hiEstimate'] = "0";
+        storyInformation[495]['name'] = "Server Admin";
+        storyInformation[495]['description'] = "asimov, castor or pollux administration";
+        storyInformation[495]['percentDone'] = "100";
+        storyInformation[495]['serviceId'] = "1";
+                              storyInformation[497] = [];
+        storyInformation[497]['phase'] = "4";
+        storyInformation[497]['loEstimate'] = "0";
+        storyInformation[497]['hiEstimate'] = "0";
+        storyInformation[497]['name'] = "Stand up meeting";
+        storyInformation[497]['description'] = "Stand up meeting";
+        storyInformation[497]['percentDone'] = "100";
+        storyInformation[497]['serviceId'] = "1";
+                              storyInformation[2136] = [];
+        storyInformation[2136]['phase'] = "4";
+        storyInformation[2136]['loEstimate'] = "0";
+        storyInformation[2136]['hiEstimate'] = "0";
+        storyInformation[2136]['name'] = "Strategic & tactical planning";
+        storyInformation[2136]['description'] = "";
+        storyInformation[2136]['percentDone'] = "100";
+        storyInformation[2136]['serviceId'] = "1";
+                              storyInformation[954] = [];
+        storyInformation[954]['phase'] = "1";
+        storyInformation[954]['loEstimate'] = "0";
+        storyInformation[954]['hiEstimate'] = "0";
+        storyInformation[954]['name'] = "Telephone";
+        storyInformation[954]['description'] = "";
+        storyInformation[954]['percentDone'] = "100";
+        storyInformation[954]['serviceId'] = "1";
+                              storyInformation[20733] = [];
+        storyInformation[20733]['phase'] = "5";
+        storyInformation[20733]['loEstimate'] = "0";
+        storyInformation[20733]['hiEstimate'] = "0";
+        storyInformation[20733]['name'] = "Visioning Exercise";
+        storyInformation[20733]['description'] = "";
+        storyInformation[20733]['percentDone'] = "100";
+        storyInformation[20733]['serviceId'] = "893";
+                              storyInformation[19425] = [];
+        storyInformation[19425]['phase'] = "5";
+        storyInformation[19425]['loEstimate'] = "0";
+        storyInformation[19425]['hiEstimate'] = "0";
+        storyInformation[19425]['name'] = "Work on project management practices";
+        storyInformation[19425]['description'] = "";
+        storyInformation[19425]['percentDone'] = "100";
+        storyInformation[19425]['serviceId'] = "1";
+              if (projId == 1)
+    
+    {
+      
+        $("#phase-new").val( 8 );
+      
+    }
+    
+      projs[1042] = [];
+      
+      
+                        projs['1042']['0'] = option("AGI PimSuite Ramp-in", "30477");
+                              
+                        storyInformation[30477] = [];
+        storyInformation[30477]['phase'] = "1";
+        storyInformation[30477]['loEstimate'] = "0";
+        storyInformation[30477]['hiEstimate'] = "0";
+        storyInformation[30477]['name'] = "AGI PimSuite Ramp-in";
+        storyInformation[30477]['description'] = "";
+        storyInformation[30477]['percentDone'] = "0";
+        storyInformation[30477]['serviceId'] = "1074";
+                        projs['1042']['1'] = option("Apiary Documentation", "33274");
+                              
+                        storyInformation[33274] = [];
+        storyInformation[33274]['phase'] = "1";
+        storyInformation[33274]['loEstimate'] = "0";
+        storyInformation[33274]['hiEstimate'] = "0";
+        storyInformation[33274]['name'] = "Apiary Documentation";
+        storyInformation[33274]['description'] = "";
+        storyInformation[33274]['percentDone'] = "0";
+        storyInformation[33274]['serviceId'] = "1074";
+                        projs['1042']['2'] = option("Blog post", "24363");
+                              
+                        storyInformation[24363] = [];
+        storyInformation[24363]['phase'] = "1";
+        storyInformation[24363]['loEstimate'] = "0";
+        storyInformation[24363]['hiEstimate'] = "0";
+        storyInformation[24363]['name'] = "Blog post";
+        storyInformation[24363]['description'] = "";
+        storyInformation[24363]['percentDone'] = "0";
+        storyInformation[24363]['serviceId'] = "1074";
+                        projs['1042']['3'] = option("BrownBag preparation", "24186");
+                              
+                        storyInformation[24186] = [];
+        storyInformation[24186]['phase'] = "1";
+        storyInformation[24186]['loEstimate'] = "0";
+        storyInformation[24186]['hiEstimate'] = "0";
+        storyInformation[24186]['name'] = "BrownBag preparation";
+        storyInformation[24186]['description'] = "";
+        storyInformation[24186]['percentDone'] = "0";
+        storyInformation[24186]['serviceId'] = "1074";
+                        projs['1042']['4'] = option("C embedded hardware data", "24264");
+                              
+                        storyInformation[24264] = [];
+        storyInformation[24264]['phase'] = "1";
+        storyInformation[24264]['loEstimate'] = "0";
+        storyInformation[24264]['hiEstimate'] = "0";
+        storyInformation[24264]['name'] = "C embedded hardware data";
+        storyInformation[24264]['description'] = "";
+        storyInformation[24264]['percentDone'] = "0";
+        storyInformation[24264]['serviceId'] = "1074";
+                        projs['1042']['5'] = option("C HTTP library research", "24187");
+                              
+                        storyInformation[24187] = [];
+        storyInformation[24187]['phase'] = "1";
+        storyInformation[24187]['loEstimate'] = "0";
+        storyInformation[24187]['hiEstimate'] = "0";
+        storyInformation[24187]['name'] = "C HTTP library research";
+        storyInformation[24187]['description'] = "";
+        storyInformation[24187]['percentDone'] = "0";
+        storyInformation[24187]['serviceId'] = "1074";
+                        projs['1042']['6'] = option("Clojure Ramp-In", "31701");
+                              
+                        storyInformation[31701] = [];
+        storyInformation[31701]['phase'] = "1";
+        storyInformation[31701]['loEstimate'] = "0";
+        storyInformation[31701]['hiEstimate'] = "0";
+        storyInformation[31701]['name'] = "Clojure Ramp-In";
+        storyInformation[31701]['description'] = "";
+        storyInformation[31701]['percentDone'] = "0";
+        storyInformation[31701]['serviceId'] = "1074";
+                        projs['1042']['7'] = option("DCI server", "24839");
+                              
+                        storyInformation[24839] = [];
+        storyInformation[24839]['phase'] = "1";
+        storyInformation[24839]['loEstimate'] = "0";
+        storyInformation[24839]['hiEstimate'] = "0";
+        storyInformation[24839]['name'] = "DCI server";
+        storyInformation[24839]['description'] = "";
+        storyInformation[24839]['percentDone'] = "0";
+        storyInformation[24839]['serviceId'] = "1074";
+                        projs['1042']['8'] = option("dDOT Ramp-In", "31338");
+                              
+                        storyInformation[31338] = [];
+        storyInformation[31338]['phase'] = "1";
+        storyInformation[31338]['loEstimate'] = "0";
+        storyInformation[31338]['hiEstimate'] = "0";
+        storyInformation[31338]['name'] = "dDOT Ramp-In";
+        storyInformation[31338]['description'] = "";
+        storyInformation[31338]['percentDone'] = "0";
+        storyInformation[31338]['serviceId'] = "1074";
+                        projs['1042']['9'] = option("Drake Parker Supervision", "32662");
+                              
+                        storyInformation[32662] = [];
+        storyInformation[32662]['phase'] = "1";
+        storyInformation[32662]['loEstimate'] = "0";
+        storyInformation[32662]['hiEstimate'] = "0";
+        storyInformation[32662]['name'] = "Drake Parker Supervision";
+        storyInformation[32662]['description'] = "";
+        storyInformation[32662]['percentDone'] = "0";
+        storyInformation[32662]['serviceId'] = "1074";
+                        projs['1042']['10'] = option("Dueling Surveys Redirects", "25395");
+                              
+                        storyInformation[25395] = [];
+        storyInformation[25395]['phase'] = "1";
+        storyInformation[25395]['loEstimate'] = "0";
+        storyInformation[25395]['hiEstimate'] = "0";
+        storyInformation[25395]['name'] = "Dueling Surveys Redirects";
+        storyInformation[25395]['description'] = "";
+        storyInformation[25395]['percentDone'] = "0";
+        storyInformation[25395]['serviceId'] = "1074";
+                        projs['1042']['11'] = option("Environment Setup", "31387");
+                              
+                        storyInformation[31387] = [];
+        storyInformation[31387]['phase'] = "1";
+        storyInformation[31387]['loEstimate'] = "0";
+        storyInformation[31387]['hiEstimate'] = "0";
+        storyInformation[31387]['name'] = "Environment Setup";
+        storyInformation[31387]['description'] = " ";
+        storyInformation[31387]['percentDone'] = "0";
+        storyInformation[31387]['serviceId'] = "1074";
+                        projs['1042']['12'] = option("Gitorious", "24793");
+                              
+                        storyInformation[24793] = [];
+        storyInformation[24793]['phase'] = "1";
+        storyInformation[24793]['loEstimate'] = "0";
+        storyInformation[24793]['hiEstimate'] = "0";
+        storyInformation[24793]['name'] = "Gitorious";
+        storyInformation[24793]['description'] = "";
+        storyInformation[24793]['percentDone'] = "0";
+        storyInformation[24793]['serviceId'] = "1074";
+                        projs['1042']['13'] = option("Goal Setting", "31439");
+                              
+                        storyInformation[31439] = [];
+        storyInformation[31439]['phase'] = "1";
+        storyInformation[31439]['loEstimate'] = "0";
+        storyInformation[31439]['hiEstimate'] = "0";
+        storyInformation[31439]['name'] = "Goal Setting";
+        storyInformation[31439]['description'] = "";
+        storyInformation[31439]['percentDone'] = "0";
+        storyInformation[31439]['serviceId'] = "1074";
+                        projs['1042']['14'] = option("Gross Margin Webapp", "25744");
+                              
+                        storyInformation[25744] = [];
+        storyInformation[25744]['phase'] = "1";
+        storyInformation[25744]['loEstimate'] = "0";
+        storyInformation[25744]['hiEstimate'] = "0";
+        storyInformation[25744]['name'] = "Gross Margin Webapp";
+        storyInformation[25744]['description'] = "";
+        storyInformation[25744]['percentDone'] = "0";
+        storyInformation[25744]['serviceId'] = "1074";
+                        projs['1042']['15'] = option("Happiness KPI", "34364");
+                              
+                        storyInformation[34364] = [];
+        storyInformation[34364]['phase'] = "1";
+        storyInformation[34364]['loEstimate'] = "0";
+        storyInformation[34364]['hiEstimate'] = "0";
+        storyInformation[34364]['name'] = "Happiness KPI";
+        storyInformation[34364]['description'] = "";
+        storyInformation[34364]['percentDone'] = "0";
+        storyInformation[34364]['serviceId'] = "1074";
+                        projs['1042']['16'] = option("Hudson", "25522");
+                              
+                        storyInformation[25522] = [];
+        storyInformation[25522]['phase'] = "1";
+        storyInformation[25522]['loEstimate'] = "0";
+        storyInformation[25522]['hiEstimate'] = "0";
+        storyInformation[25522]['name'] = "Hudson";
+        storyInformation[25522]['description'] = "";
+        storyInformation[25522]['percentDone'] = "0";
+        storyInformation[25522]['serviceId'] = "1074";
+                        projs['1042']['17'] = option("iOS Watchit", "28611");
+                              
+                        storyInformation[28611] = [];
+        storyInformation[28611]['phase'] = "1";
+        storyInformation[28611]['loEstimate'] = "0";
+        storyInformation[28611]['hiEstimate'] = "0";
+        storyInformation[28611]['name'] = "iOS Watchit";
+        storyInformation[28611]['description'] = "";
+        storyInformation[28611]['percentDone'] = "0";
+        storyInformation[28611]['serviceId'] = "1074";
+                        projs['1042']['18'] = option("iPhone E-Commerce Research", "24687");
+                              
+                        storyInformation[24687] = [];
+        storyInformation[24687]['phase'] = "1";
+        storyInformation[24687]['loEstimate'] = "0";
+        storyInformation[24687]['hiEstimate'] = "0";
+        storyInformation[24687]['name'] = "iPhone E-Commerce Research";
+        storyInformation[24687]['description'] = "";
+        storyInformation[24687]['percentDone'] = "0";
+        storyInformation[24687]['serviceId'] = "1074";
+                        projs['1042']['19'] = option("Kidtelligent Rails Setup", "25301");
+                              
+                        storyInformation[25301] = [];
+        storyInformation[25301]['phase'] = "1";
+        storyInformation[25301]['loEstimate'] = "0";
+        storyInformation[25301]['hiEstimate'] = "0";
+        storyInformation[25301]['name'] = "Kidtelligent Rails Setup";
+        storyInformation[25301]['description'] = "";
+        storyInformation[25301]['percentDone'] = "0";
+        storyInformation[25301]['serviceId'] = "1074";
+                        projs['1042']['20'] = option("Learning Haskell", "33131");
+                              
+                        storyInformation[33131] = [];
+        storyInformation[33131]['phase'] = "1";
+        storyInformation[33131]['loEstimate'] = "0";
+        storyInformation[33131]['hiEstimate'] = "0";
+        storyInformation[33131]['name'] = "Learning Haskell";
+        storyInformation[33131]['description'] = "";
+        storyInformation[33131]['percentDone'] = "0";
+        storyInformation[33131]['serviceId'] = "1074";
+                        projs['1042']['21'] = option("Library Reading", "24254");
+                              
+                        storyInformation[24254] = [];
+        storyInformation[24254]['phase'] = "1";
+        storyInformation[24254]['loEstimate'] = "0";
+        storyInformation[24254]['hiEstimate'] = "0";
+        storyInformation[24254]['name'] = "Library Reading";
+        storyInformation[24254]['description'] = "";
+        storyInformation[24254]['percentDone'] = "0";
+        storyInformation[24254]['serviceId'] = "1074";
+                        projs['1042']['22'] = option("New Story", "30876");
+                              
+                        storyInformation[30876] = [];
+        storyInformation[30876]['phase'] = "1";
+        storyInformation[30876]['loEstimate'] = "0";
+        storyInformation[30876]['hiEstimate'] = "0";
+        storyInformation[30876]['name'] = "New Story";
+        storyInformation[30876]['description'] = "Practicing Haml";
+        storyInformation[30876]['percentDone'] = "0";
+        storyInformation[30876]['serviceId'] = "1074";
+                        projs['1042']['23'] = option("Objection Example Project", "28788");
+                              
+                        storyInformation[28788] = [];
+        storyInformation[28788]['phase'] = "1";
+        storyInformation[28788]['loEstimate'] = "0";
+        storyInformation[28788]['hiEstimate'] = "0";
+        storyInformation[28788]['name'] = "Objection Example Project";
+        storyInformation[28788]['description'] = "An example project illustrating the use of Justin\\\\\\\'s open-source Objective-C dependency objection implementation called Objection.";
+        storyInformation[28788]['percentDone'] = "0";
+        storyInformation[28788]['serviceId'] = "1074";
+                        projs['1042']['24'] = option("Observation", "25117");
+                              
+                        storyInformation[25117] = [];
+        storyInformation[25117]['phase'] = "1";
+        storyInformation[25117]['loEstimate'] = "0";
+        storyInformation[25117]['hiEstimate'] = "0";
+        storyInformation[25117]['name'] = "Observation";
+        storyInformation[25117]['description'] = "";
+        storyInformation[25117]['percentDone'] = "0";
+        storyInformation[25117]['serviceId'] = "1074";
+                        projs['1042']['25'] = option("PlanIt 2012", "31679");
+                              
+                        storyInformation[31679] = [];
+        storyInformation[31679]['phase'] = "1";
+        storyInformation[31679]['loEstimate'] = "0";
+        storyInformation[31679]['hiEstimate'] = "0";
+        storyInformation[31679]['name'] = "PlanIt 2012";
+        storyInformation[31679]['description'] = "";
+        storyInformation[31679]['percentDone'] = "0";
+        storyInformation[31679]['serviceId'] = "1074";
+                        projs['1042']['26'] = option("Portal Redesign", "33463");
+                              
+                        storyInformation[33463] = [];
+        storyInformation[33463]['phase'] = "1";
+        storyInformation[33463]['loEstimate'] = "0";
+        storyInformation[33463]['hiEstimate'] = "0";
+        storyInformation[33463]['name'] = "Portal Redesign";
+        storyInformation[33463]['description'] = "";
+        storyInformation[33463]['percentDone'] = "0";
+        storyInformation[33463]['serviceId'] = "1074";
+                        projs['1042']['27'] = option("Practicing C", "31497");
+                              
+                        storyInformation[31497] = [];
+        storyInformation[31497]['phase'] = "1";
+        storyInformation[31497]['loEstimate'] = "0";
+        storyInformation[31497]['hiEstimate'] = "0";
+        storyInformation[31497]['name'] = "Practicing C";
+        storyInformation[31497]['description'] = "";
+        storyInformation[31497]['percentDone'] = "0";
+        storyInformation[31497]['serviceId'] = "1074";
+                        projs['1042']['28'] = option("Practicing C#", "31506");
+                              
+                        storyInformation[31506] = [];
+        storyInformation[31506]['phase'] = "1";
+        storyInformation[31506]['loEstimate'] = "0";
+        storyInformation[31506]['hiEstimate'] = "0";
+        storyInformation[31506]['name'] = "Practicing C#";
+        storyInformation[31506]['description'] = "";
+        storyInformation[31506]['percentDone'] = "0";
+        storyInformation[31506]['serviceId'] = "1074";
+                        projs['1042']['29'] = option("Practicing Clojure", "31503");
+                              
+                        storyInformation[31503] = [];
+        storyInformation[31503]['phase'] = "1";
+        storyInformation[31503]['loEstimate'] = "0";
+        storyInformation[31503]['hiEstimate'] = "0";
+        storyInformation[31503]['name'] = "Practicing Clojure";
+        storyInformation[31503]['description'] = "";
+        storyInformation[31503]['percentDone'] = "0";
+        storyInformation[31503]['serviceId'] = "1074";
+                        projs['1042']['30'] = option("Practicing CoffeeScript", "31330");
+                              
+                        storyInformation[31330] = [];
+        storyInformation[31330]['phase'] = "1";
+        storyInformation[31330]['loEstimate'] = "0";
+        storyInformation[31330]['hiEstimate'] = "0";
+        storyInformation[31330]['name'] = "Practicing CoffeeScript";
+        storyInformation[31330]['description'] = "";
+        storyInformation[31330]['percentDone'] = "0";
+        storyInformation[31330]['serviceId'] = "1074";
+                        projs['1042']['31'] = option("Practicing GreaseMonkey", "30800");
+                              
+                        storyInformation[30800] = [];
+        storyInformation[30800]['phase'] = "1";
+        storyInformation[30800]['loEstimate'] = "0";
+        storyInformation[30800]['hiEstimate'] = "0";
+        storyInformation[30800]['name'] = "Practicing GreaseMonkey";
+        storyInformation[30800]['description'] = "";
+        storyInformation[30800]['percentDone'] = "0";
+        storyInformation[30800]['serviceId'] = "1074";
+                        projs['1042']['32'] = option("Practicing HAML", "30877");
+                              
+                        storyInformation[30877] = [];
+        storyInformation[30877]['phase'] = "1";
+        storyInformation[30877]['loEstimate'] = "0";
+        storyInformation[30877]['hiEstimate'] = "0";
+        storyInformation[30877]['name'] = "Practicing HAML";
+        storyInformation[30877]['description'] = "";
+        storyInformation[30877]['percentDone'] = "0";
+        storyInformation[30877]['serviceId'] = "1074";
+                        projs['1042']['33'] = option("Practicing HTML / CSS / JavaScript", "31370");
+                              
+                        storyInformation[31370] = [];
+        storyInformation[31370]['phase'] = "1";
+        storyInformation[31370]['loEstimate'] = "0";
+        storyInformation[31370]['hiEstimate'] = "0";
+        storyInformation[31370]['name'] = "Practicing HTML / CSS / JavaScript";
+        storyInformation[31370]['description'] = "";
+        storyInformation[31370]['percentDone'] = "0";
+        storyInformation[31370]['serviceId'] = "1074";
+                        projs['1042']['34'] = option("Practicing Javascript", "31320");
+                              
+                        storyInformation[31320] = [];
+        storyInformation[31320]['phase'] = "1";
+        storyInformation[31320]['loEstimate'] = "0";
+        storyInformation[31320]['hiEstimate'] = "0";
+        storyInformation[31320]['name'] = "Practicing Javascript";
+        storyInformation[31320]['description'] = "";
+        storyInformation[31320]['percentDone'] = "0";
+        storyInformation[31320]['serviceId'] = "1074";
+                        projs['1042']['35'] = option("Practicing Meteor.com", "31718");
+                              
+                        storyInformation[31718] = [];
+        storyInformation[31718]['phase'] = "1";
+        storyInformation[31718]['loEstimate'] = "0";
+        storyInformation[31718]['hiEstimate'] = "0";
+        storyInformation[31718]['name'] = "Practicing Meteor.com";
+        storyInformation[31718]['description'] = "";
+        storyInformation[31718]['percentDone'] = "0";
+        storyInformation[31718]['serviceId'] = "1074";
+                        projs['1042']['36'] = option("Practicing Mockups", "31607");
+                              
+                        storyInformation[31607] = [];
+        storyInformation[31607]['phase'] = "1";
+        storyInformation[31607]['loEstimate'] = "0";
+        storyInformation[31607]['hiEstimate'] = "0";
+        storyInformation[31607]['name'] = "Practicing Mockups";
+        storyInformation[31607]['description'] = "";
+        storyInformation[31607]['percentDone'] = "0";
+        storyInformation[31607]['serviceId'] = "1074";
+                        projs['1042']['37'] = option("Practicing Noir", "31732");
+                              
+                        storyInformation[31732] = [];
+        storyInformation[31732]['phase'] = "1";
+        storyInformation[31732]['loEstimate'] = "0";
+        storyInformation[31732]['hiEstimate'] = "0";
+        storyInformation[31732]['name'] = "Practicing Noir";
+        storyInformation[31732]['description'] = "";
+        storyInformation[31732]['percentDone'] = "0";
+        storyInformation[31732]['serviceId'] = "1074";
+                        projs['1042']['38'] = option("Practicing PHP", "31702");
+                              
+                        storyInformation[31702] = [];
+        storyInformation[31702]['phase'] = "1";
+        storyInformation[31702]['loEstimate'] = "0";
+        storyInformation[31702]['hiEstimate'] = "0";
+        storyInformation[31702]['name'] = "Practicing PHP";
+        storyInformation[31702]['description'] = "";
+        storyInformation[31702]['percentDone'] = "0";
+        storyInformation[31702]['serviceId'] = "1074";
+                        projs['1042']['39'] = option("Practicing Ruby / Rails", "30659");
+                              
+                        storyInformation[30659] = [];
+        storyInformation[30659]['phase'] = "1";
+        storyInformation[30659]['loEstimate'] = "0";
+        storyInformation[30659]['hiEstimate'] = "0";
+        storyInformation[30659]['name'] = "Practicing Ruby / Rails";
+        storyInformation[30659]['description'] = "";
+        storyInformation[30659]['percentDone'] = "0";
+        storyInformation[30659]['serviceId'] = "1074";
+                        projs['1042']['40'] = option("Practicing Storyboarding", "31640");
+                              
+                        storyInformation[31640] = [];
+        storyInformation[31640]['phase'] = "1";
+        storyInformation[31640]['loEstimate'] = "0";
+        storyInformation[31640]['hiEstimate'] = "0";
+        storyInformation[31640]['name'] = "Practicing Storyboarding";
+        storyInformation[31640]['description'] = "";
+        storyInformation[31640]['percentDone'] = "0";
+        storyInformation[31640]['serviceId'] = "1074";
+                        projs['1042']['41'] = option("PunchIt Project Time script", "25740");
+                              
+                        storyInformation[25740] = [];
+        storyInformation[25740]['phase'] = "1";
+        storyInformation[25740]['loEstimate'] = "0";
+        storyInformation[25740]['hiEstimate'] = "0";
+        storyInformation[25740]['name'] = "PunchIt Project Time script";
+        storyInformation[25740]['description'] = "";
+        storyInformation[25740]['percentDone'] = "0";
+        storyInformation[25740]['serviceId'] = "1074";
+                        projs['1042']['42'] = option("Punchit Report Script", "25466");
+                              
+                        storyInformation[25466] = [];
+        storyInformation[25466]['phase'] = "1";
+        storyInformation[25466]['loEstimate'] = "0";
+        storyInformation[25466]['hiEstimate'] = "0";
+        storyInformation[25466]['name'] = "Punchit Report Script";
+        storyInformation[25466]['description'] = "";
+        storyInformation[25466]['percentDone'] = "0";
+        storyInformation[25466]['serviceId'] = "1074";
+                        projs['1042']['43'] = option("Retrospection", "26054");
+                              
+                        storyInformation[26054] = [];
+        storyInformation[26054]['phase'] = "1";
+        storyInformation[26054]['loEstimate'] = "0";
+        storyInformation[26054]['hiEstimate'] = "0";
+        storyInformation[26054]['name'] = "Retrospection";
+        storyInformation[26054]['description'] = "";
+        storyInformation[26054]['percentDone'] = "0";
+        storyInformation[26054]['serviceId'] = "1074";
+                        projs['1042']['44'] = option("RubyWarrior", "30595");
+                              
+                        storyInformation[30595] = [];
+        storyInformation[30595]['phase'] = "1";
+        storyInformation[30595]['loEstimate'] = "0";
+        storyInformation[30595]['hiEstimate'] = "0";
+        storyInformation[30595]['name'] = "RubyWarrior";
+        storyInformation[30595]['description'] = "";
+        storyInformation[30595]['percentDone'] = "0";
+        storyInformation[30595]['serviceId'] = "1074";
+                        projs['1042']['45'] = option("SalesForces API research", "24234");
+                              
+                        storyInformation[24234] = [];
+        storyInformation[24234]['phase'] = "1";
+        storyInformation[24234]['loEstimate'] = "0";
+        storyInformation[24234]['hiEstimate'] = "0";
+        storyInformation[24234]['name'] = "SalesForces API research";
+        storyInformation[24234]['description'] = "";
+        storyInformation[24234]['percentDone'] = "0";
+        storyInformation[24234]['serviceId'] = "1074";
+                        projs['1042']['46'] = option("Swagger Integration", "33219");
+                              
+                        storyInformation[33219] = [];
+        storyInformation[33219]['phase'] = "1";
+        storyInformation[33219]['loEstimate'] = "0";
+        storyInformation[33219]['hiEstimate'] = "0";
+        storyInformation[33219]['name'] = "Swagger Integration";
+        storyInformation[33219]['description'] = "";
+        storyInformation[33219]['percentDone'] = "0";
+        storyInformation[33219]['serviceId'] = "1074";
+                        projs['1042']['47'] = option("University status report", "30962");
+                              
+                        storyInformation[30962] = [];
+        storyInformation[30962]['phase'] = "1";
+        storyInformation[30962]['loEstimate'] = "0";
+        storyInformation[30962]['hiEstimate'] = "0";
+        storyInformation[30962]['name'] = "University status report";
+        storyInformation[30962]['description'] = "";
+        storyInformation[30962]['percentDone'] = "0";
+        storyInformation[30962]['serviceId'] = "1074";
+                        projs['1042']['48'] = option("WatchIt", "24268");
+                              
+                        storyInformation[24268] = [];
+        storyInformation[24268]['phase'] = "1";
+        storyInformation[24268]['loEstimate'] = "0";
+        storyInformation[24268]['hiEstimate'] = "0";
+        storyInformation[24268]['name'] = "WatchIt";
+        storyInformation[24268]['description'] = "";
+        storyInformation[24268]['percentDone'] = "0";
+        storyInformation[24268]['serviceId'] = "1074";
+              if (projId == 1042)
+    
+    {
+      
+        $("#phase-new").val( 1 );
+      
+    }
+    
+          if (projId == 30)
+    
+    {
+      
+        $("#phase-new").val( 1 );
+      
+    }
+    
+  
+    var storyId = 0;
+
+  
+
+    var arr = projs[projId];
+
+    if (!arr)
+    {
+      // the given proj has no stories
+      storyList[0] = new Option("(no stories)", "null", true,true);
+      storyList[0].selected = true;
+      $("#editStories").hide();
+      return;
+    }
+
+    $("#editStories").show();
+
+    // Populate story pulldown with the Options we built earlier for
+    // this project:
+    for (var i = 0; i < arr.length; i++)
+    {
+      storyList[i+1] = arr[i];
+    }
+
+    // Reset selection to first item
+    for (var i=0; i < storyList.length; i++) {
+      if (storyList[i].value == storyId) {
+        storyList[i].selected = true;
+        break;
+      }
+    }
+
+    // For when we reload the page with information
+    fillInStoryInfo();
+  }
+
+  function initialize()
+  {
+    checkForStories(document.forms.addpunch.project,
+        document.forms.addpunch.project.selectedIndex);
+    checkForServices(document.forms.addpunch.project, document.forms.addpunch.project.selectedIndex);
+    checkForEditServices(document.forms.addpunch.project, document.forms.addpunch.project.selectedIndex);
+  }
+
+  // Check if we need to update currently visible dropdowns
+  function updateDropdowns()
+  {
+    var storyId = document.forms.addpunch.story.value;
+    var projId = document.forms.addpunch.project.value;
+
+    if ($("#new-story:visible").length > 0)
+    {
+      if (projId < 0 || projId == "null")
+      {
+        $("#new-story").hide();
+        $("#new-error").show();
+
+        // HACK
+        if ($("#edit-error:visible").length > 0)
+        {
+          $("#edit-error").hide();
+          $("#edit-error").show();
+        }
+      }
+    }
+    else if ($("#new-error:visible").length > 0)
+    {
+      if (projId >= 0)
+      {
+        $("#new-error").hide();
+        $("#new-story").show();
+      }
+    }
+
+    if ($("#edit-story:visible").length > 0)
+    {
+      if (storyId < 0 || storyId == "null")
+      {
+        $("#edit-story").hide();
+        $("#edit-error").show();
+      }
+    }
+    else if ($("#edit-error:visible").length > 0)
+    {
+      if (storyId >= 0)
+      {
+        $("#edit-error").hide();
+        $("#edit-story").show();
+      }
+    }
+  }
+
+  function expander(elem)
+  {
+    if (elem == "#edit-story")
+    {
+      var storyId = document.forms.addpunch.story.value;
+      if (storyId <= 0 || storyId == "null")
+      {
+        if ($("#edit-story:visible").length > 0)
+        {
+          $("#edit-story").hide();
+        }
+        elem = "#edit-error";
+      }
+    }
+    else if (elem == "#new-story")
+    {
+      var projId = document.forms.addpunch.project.value;
+      if (projId <= 0 || projId == "null")
+      {
+        if ($("#new-story:visible").length > 0)
+        {
+          $("#new-story").hide();
+        }
+        elem = "#new-error";
+      }
+    }
+
+    if ($(elem).is(":visible"))
+    {
+      $(elem).hide();
+    }
+    else
+    {
+      $(elem).show();
+    }
+  }
+
+  function fillInStoryInfo()
+  {
+    var projId = document.forms.addpunch.project.value;
+    var storyId = document.forms.addpunch.story.value;
+
+    if (storyId <= 0 || projId <= 0)
+    {
+      return;
+    }
+
+    $("#phase-edit").val(storyInformation[storyId]['phase']);
+    $("#loEstimate-edit").val(storyInformation[storyId]['loEstimate']);
+    $("#hiEstimate-edit").val(storyInformation[storyId]['hiEstimate']);
+    $("#name-edit").val(storyInformation[storyId]['name']);
+    $("#description-edit").val(storyInformation[storyId]['description']);
+    $("#percentDone-edit").val(storyInformation[storyId]['percentDone']);
+    $("#editStoryId").val(storyId);
+    $("#service-edit").val(storyInformation[storyId]['serviceId']);
+  }
+
+  function editStories()
+  {
+    var location = "adminStories.php?project=";
+
+    location += document.forms.addpunch.project.value;
+
+    document.location = location;
+  }
+
+</script>
+
+<small>
+              You are logged in as: <b>Nick Land (118)</b>
+            </small><table style="width: 760px;">
+  <tbody><tr>
+    <td valign="top">
+      <table>
+        <tbody><tr>
+          <td>
+            
+          </td>
+        </tr>
+                <tr>
+          <td>
+            <form name="addpunch" id="addpunch" action="./Atomic PunchIt_files/Atomic PunchIt.html" method="POST" _lpchecked="1">
+                <div class="reload-button" id="reload-projects"></div>
+                  <input type="submit" value="Show All Projects" name="allprojects" tabindex="21" id="all-projects">
+                  <select id="project" name="project" tabindex="-1" onchange="checkForStories(this, this.selectedIndex);checkForServices(this, this.selectedIndex);checkForEditServices(this, this.selectedIndex);updateDropdowns();" style="display: none;" class="chzn-done"><option value="">Select A Project</option><optgroup data-type="recent" label="Recent">
+<option value="1042">Atomic Internship</option>
+</optgroup>
+<optgroup data-type="atomic" label="Atomic">
+<option value="1">General</option>,<option value="30">Lunch</option>,<option value="29">Personal Time</option>,<option value="1329">Spin Content</option>,<option value="18">Vacation - Paid</option>,<option value="17">Holiday, NOT VACATION</option>,<option value="255">Sick Day</option>
+</optgroup></select><div id="project_chzn" class="chzn-container  chzn-container-single" style="width: 640px;"><a href="javascript:void(0)" class="chzn-single" tabindex="1"><span>Atomic Internship</span><div><b></b></div></a><div class="chzn-drop" style="left: -9000px; width: 638px; top: 31px;"><div class="chzn-search"><input type="text" autocomplete="off" tabindex="-1" style="width: 603px;"></div><ul class="chzn-results"><li id="project_chzn_o_0" class="active-result">Select A Project</li><li id="project_chzn_g_1" class="group-result">Recent</li><li id="project_chzn_o_2" class="active-result result-selected group-option">Atomic Internship</li><li id="project_chzn_g_3" class="group-result">Atomic</li><li id="project_chzn_o_4" class="active-result group-option">General</li><li id="project_chzn_o_5" class="active-result group-option">Lunch</li><li id="project_chzn_o_6" class="active-result group-option">Personal Time</li><li id="project_chzn_o_7" class="active-result group-option">Spin Content</li><li id="project_chzn_o_8" class="active-result group-option">Vacation - Paid</li><li id="project_chzn_o_9" class="active-result group-option">Holiday, NOT VACATION</li><li id="project_chzn_o_10" class="active-result group-option">Sick Day</li></ul></div></div>
+                  <div class="reload-button" id="reload-stories" style="display: block;"></div>
+                  <select onchange="fillInStoryInfo();updateDropdowns();" id="story" name="story" tabindex="-1" style="display: none;" class="chzn-done"><option value="">Select a Story</option><option value="30477">AGI PimSuite Ramp-in</option><option value="33274">Apiary Documentation</option><option value="24363">Blog post</option><option value="24186">BrownBag preparation</option><option value="24187">C HTTP library research</option><option value="24264">C embedded hardware data</option><option value="31701">Clojure Ramp-In</option><option value="24839">DCI server</option><option value="32662">Drake Parker Supervision</option><option value="25395">Dueling Surveys Redirects</option><option value="31387">Environment Setup</option><option value="24793">Gitorious</option><option value="31439">Goal Setting</option><option value="25744">Gross Margin Webapp</option><option value="34364">Happiness KPI</option><option value="25522">Hudson</option><option value="25301">Kidtelligent Rails Setup</option><option value="33131">Learning Haskell</option><option value="24254">Library Reading</option><option value="30876">New Story</option><option value="28788">Objection Example Project</option><option value="25117">Observation</option><option value="31679">PlanIt 2012</option><option value="33463">Portal Redesign</option><option value="31497">Practicing C</option><option value="31506">Practicing C#</option><option value="31503">Practicing Clojure</option><option value="31330">Practicing CoffeeScript</option><option value="30800">Practicing GreaseMonkey</option><option value="30877">Practicing HAML</option><option value="31370">Practicing HTML / CSS / JavaScript</option><option value="31320">Practicing Javascript</option><option value="31718">Practicing Meteor.com</option><option value="31607">Practicing Mockups</option><option value="31732">Practicing Noir</option><option value="31702">Practicing PHP</option><option value="30659">Practicing Ruby / Rails</option><option value="31640">Practicing Storyboarding</option><option value="25740">PunchIt Project Time script</option><option value="25466">Punchit Report Script</option><option value="26054">Retrospection</option><option value="30595">RubyWarrior</option><option value="24234">SalesForces API research</option><option value="33219">Swagger Integration</option><option value="30962">University status report</option><option value="24268">WatchIt</option><option value="31338">dDOT Ramp-In</option><option value="28611">iOS Watchit</option><option value="24687">iPhone E-Commerce Research</option></select><div id="story_chzn" class="chzn-container  chzn-container-single" style="width: 524px;"><a href="javascript:void(0)" class="chzn-single" tabindex="2"><span>Practicing Javascript</span><div><b></b></div></a><div class="chzn-drop" style="left: -9000px; width: 522px; top: 31px;"><div class="chzn-search"><input type="text" autocomplete="off" tabindex="-1" style="width: 487px;"></div><ul class="chzn-results"><li id="story_chzn_o_0" class="active-result">Select a Story</li><li id="story_chzn_o_1" class="active-result">AGI PimSuite Ramp-in</li><li id="story_chzn_o_2" class="active-result">Apiary Documentation</li><li id="story_chzn_o_3" class="active-result">Blog post</li><li id="story_chzn_o_4" class="active-result">BrownBag preparation</li><li id="story_chzn_o_5" class="active-result">C HTTP library research</li><li id="story_chzn_o_6" class="active-result">C embedded hardware data</li><li id="story_chzn_o_7" class="active-result">Clojure Ramp-In</li><li id="story_chzn_o_8" class="active-result">DCI server</li><li id="story_chzn_o_9" class="active-result">Drake Parker Supervision</li><li id="story_chzn_o_10" class="active-result">Dueling Surveys Redirects</li><li id="story_chzn_o_11" class="active-result">Environment Setup</li><li id="story_chzn_o_12" class="active-result">Gitorious</li><li id="story_chzn_o_13" class="active-result">Goal Setting</li><li id="story_chzn_o_14" class="active-result">Gross Margin Webapp</li><li id="story_chzn_o_15" class="active-result result-selected">Happiness KPI</li><li id="story_chzn_o_16" class="active-result">Hudson</li><li id="story_chzn_o_17" class="active-result">Kidtelligent Rails Setup</li><li id="story_chzn_o_18" class="active-result">Learning Haskell</li><li id="story_chzn_o_19" class="active-result">Library Reading</li><li id="story_chzn_o_20" class="active-result">New Story</li><li id="story_chzn_o_21" class="active-result">Objection Example Project</li><li id="story_chzn_o_22" class="active-result">Observation</li><li id="story_chzn_o_23" class="active-result">PlanIt 2012</li><li id="story_chzn_o_24" class="active-result">Portal Redesign</li><li id="story_chzn_o_25" class="active-result">Practicing C</li><li id="story_chzn_o_26" class="active-result">Practicing C#</li><li id="story_chzn_o_27" class="active-result">Practicing Clojure</li><li id="story_chzn_o_28" class="active-result">Practicing CoffeeScript</li><li id="story_chzn_o_29" class="active-result">Practicing GreaseMonkey</li><li id="story_chzn_o_30" class="active-result">Practicing HAML</li><li id="story_chzn_o_31" class="active-result">Practicing HTML / CSS / JavaScript</li><li id="story_chzn_o_32" class="active-result result-selected">Practicing Javascript</li><li id="story_chzn_o_33" class="active-result">Practicing Meteor.com</li><li id="story_chzn_o_34" class="active-result">Practicing Mockups</li><li id="story_chzn_o_35" class="active-result">Practicing Noir</li><li id="story_chzn_o_36" class="active-result">Practicing PHP</li><li id="story_chzn_o_37" class="active-result">Practicing Ruby / Rails</li><li id="story_chzn_o_38" class="active-result">Practicing Storyboarding</li><li id="story_chzn_o_39" class="active-result">PunchIt Project Time script</li><li id="story_chzn_o_40" class="active-result">Punchit Report Script</li><li id="story_chzn_o_41" class="active-result">Retrospection</li><li id="story_chzn_o_42" class="active-result">RubyWarrior</li><li id="story_chzn_o_43" class="active-result">SalesForces API research</li><li id="story_chzn_o_44" class="active-result">Swagger Integration</li><li id="story_chzn_o_45" class="active-result">University status report</li><li id="story_chzn_o_46" class="active-result">WatchIt</li><li id="story_chzn_o_47" class="active-result">dDOT Ramp-In</li><li id="story_chzn_o_48" class="active-result">iOS Watchit</li><li id="story_chzn_o_49" class="active-result">iPhone E-Commerce Research</li></ul></div></div>
+                  <input type="button" value="Edit Stories" id="editStories" style="display: inline;">
+                  <input type="button" onclick="expander(&#39;#new-story&#39;);" value="Add Story" name="add story" id="add-story" style="display: inline-block;">
+                  <div id="edit-story-button-container">
+                    <input type="button" onclick="expander(&#39;#edit-story&#39;);" value="Edit Story" name="edit story" id="edit-story-button" style="display: inline-block;">
+                    <div title="Mark story 100% complete" style="display: block;" id="complete-story-button"></div>
+                  </div>
+                  <div id="punch-time-container">
+                    <select name="Punch_Month">
+<option label="January" value="01">January</option>
+<option label="February" value="02">February</option>
+<option label="March" value="03">March</option>
+<option label="April" value="04">April</option>
+<option label="May" value="05">May</option>
+<option label="June" value="06">June</option>
+<option label="July" value="07">July</option>
+<option label="August" value="08" selected="selected">August</option>
+<option label="September" value="09">September</option>
+<option label="October" value="10">October</option>
+<option label="November" value="11">November</option>
+<option label="December" value="12">December</option>
+</select>
+<select name="Punch_Day">
+<option label="01" value="1">01</option>
+<option label="02" value="2">02</option>
+<option label="03" value="3">03</option>
+<option label="04" value="4">04</option>
+<option label="05" value="5">05</option>
+<option label="06" value="6">06</option>
+<option label="07" value="7">07</option>
+<option label="08" value="8">08</option>
+<option label="09" value="9">09</option>
+<option label="10" value="10">10</option>
+<option label="11" value="11">11</option>
+<option label="12" value="12">12</option>
+<option label="13" value="13" selected="selected">13</option>
+<option label="14" value="14">14</option>
+<option label="15" value="15">15</option>
+<option label="16" value="16">16</option>
+<option label="17" value="17">17</option>
+<option label="18" value="18">18</option>
+<option label="19" value="19">19</option>
+<option label="20" value="20">20</option>
+<option label="21" value="21">21</option>
+<option label="22" value="22">22</option>
+<option label="23" value="23">23</option>
+<option label="24" value="24">24</option>
+<option label="25" value="25">25</option>
+<option label="26" value="26">26</option>
+<option label="27" value="27">27</option>
+<option label="28" value="28">28</option>
+<option label="29" value="29">29</option>
+<option label="30" value="30">30</option>
+<option label="31" value="31">31</option>
+</select>
+<select name="Punch_Year">
+<option label="2000" value="2000">2000</option>
+<option label="2001" value="2001">2001</option>
+<option label="2002" value="2002">2002</option>
+<option label="2003" value="2003">2003</option>
+<option label="2004" value="2004">2004</option>
+<option label="2005" value="2005">2005</option>
+<option label="2006" value="2006">2006</option>
+<option label="2007" value="2007">2007</option>
+<option label="2008" value="2008">2008</option>
+<option label="2009" value="2009">2009</option>
+<option label="2010" value="2010">2010</option>
+<option label="2011" value="2011">2011</option>
+<option label="2012" value="2012">2012</option>
+<option label="2013" value="2013" selected="selected">2013</option>
+<option label="2014" value="2014">2014</option>
+</select>
+                    <input tabindex="22" name="today" value="Today" type="submit"><a id="not-today" title="This date is not today. Just so you know." style="display: inline;"></a>
+                    <div class="notes">
+                      <span class="note">Note! Clients see these comments on invoices</span>
+                      <br>
+                      <textarea id="notes" tabindex="5" cols="30" rows="3" name="notes"></textarea>
+                    </div>
+                    <div id="start-stop-container">
+                      <span>Start: <input id="start" tabindex="3" name="start" size="5" value=""></span>
+                      <span>Stop: <input id="stop" tabindex="4" name="stop" size="5" value=""></span>
+                    </div>
+                  </div>
+                  <input id="punchit" tabindex="20" name="punchit" value="Punch it!" type="submit" style="display: inline-block;">
+                  <div id="new-story" style="display: none; ">
+                  <table border="1" cellpadding="3" width="100%">
+                  <tbody><tr>
+                    <th> Phase </th>
+                    <th> Lo Est </th>
+                    <th> Hi Est </th>
+                    <th> Add Story </th>
+                    <th> % Done </th>
+                  </tr>
+
+                  <tr>
+                    <td align="center">
+                      <input tabindex="6" type="text" size="3" name="phase-new" id="phase-new">
+                    </td>
+
+                    <td align="center">
+                      <input tabindex="7" type="text" size="4" name="loEstimate-new" id="loEstimate-new" value="0">
+                    </td>
+
+                    <td align="center">
+                      <input tabindex="8" type="text" size="4" name="hiEstimate-new" id="hiEstimate-new" value="0">
+                    </td>
+
+                    <td>
+                      <input tabindex="9" type="text" size="40" name="name-new" id="name-new" value="New Story">
+                      <br>
+                      <select id="service-new" name="service-new"><option value="1074">Software Development</option></select>
+                      <br>
+                      <textarea tabindex="10" rows="3" cols="38" name="description-new" id="description-new"></textarea>
+                    </td>
+                    <td align="center">
+                      <input tabindex="11" type="text" size="5" name="percentDone-new" id="percentDone-new" value="0">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="5" align="right">
+                      <input tabindex="12" id="new-story-submit" name="addStory" value="Add" type="submit">
+                    </td>
+                  </tr>
+                  </tbody></table>
+                </div>
+                <div id="edit-story" style="display: none;">
+                  <input type="hidden" id="editStoryId" name="editStoryId" value="">
+                  <table border="1" cellpadding="3" width="100%">
+                  <tbody><tr>
+                    <th> Phase </th>
+                    <th> Lo Est </th>
+                    <th> Hi Est </th>
+                    <th> Edit Story </th>
+                    <th> % Done </th>
+                  </tr>
+
+                  <tr>
+                    <td align="center">
+                      <input tabindex="13" type="text" size="3" name="phase-edit" id="phase-edit">
+                    </td>
+
+                    <td align="center">
+                      <input tabindex="14" type="text" size="4" name="loEstimate-edit" id="loEstimate-edit" value="0">
+                    </td>
+
+                    <td align="center">
+                      <input tabindex="15" type="text" size="4" name="hiEstimate-edit" id="hiEstimate-edit" value="0">
+                    </td>
+
+                    <td>
+                      <input tabindex="16" type="text" size="40" name="name-edit" id="name-edit" value="edit Story">
+                      <br>
+                      <select id="service-edit" name="service-edit"><option value="1074">Software Development</option></select>
+                      <br>
+                      <textarea tabindex="17" rows="3" cols="38" name="description-edit" id="description-edit"></textarea>
+                    </td>
+                    <td align="center">
+                      <input tabindex="18" type="text" size="5" name="percentDone-edit" id="percentDone-edit" value="0">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="5" align="right">
+                      <input tabindex="19" name="editStory" id="edit-story-submit" value="Update" type="submit">
+                    </td>
+                  </tr>
+                  </tbody></table>
+                </div>
+                <div id="new-error" style="display: none; ">
+                  <h3>Please select a project to add a story to.</h3>
+                </div>
+                <div id="edit-error" style="display: none; ">
+                  <h3>Please select a story to edit.</h3>
+                </div>
+
+            <!-- If we're editing a punch, we'll need the id when we submit -->
+            <input type="hidden" id="id" name="id" value="">
+            <input type="hidden" name="week" value="709">
+
+          </form>
+          <div id="week-controls" class="clear">
+            
+            <a id="prev-week" href="https://punchit.atomicobject.com/newpunch.php?week=708" title="Previous Week">«</a>
+            <span class="week">
+            
+            
+            Mon Aug 12th 2013 - Sun Aug 18th 2013
+            </span>
+            
+            <a id="next-week" href="https://punchit.atomicobject.com/newpunch.php?week=710" title="Next Week">»</a>
+          </div>
+          <table class="inset-shadow">         <tbody>                  <tr class="dateheader-row">           <td colspan="7" class="dateheader">             <span class="day-date"><span class="expanded"></span>Wed 08/14/2013</span><span class="punch-info">Content</span><span class="daily-total question">0h</span>             <div class="greenbar" style="width: 100%; height: 40px;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="770" height="40" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><path fill="none" stroke="#000000" d="M801.5,19L801.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M774.5,19L774.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M787.5,6L787.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M760.5,3L760.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M747.5,19L747.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M720.5,19L720.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M733.5,6L733.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M706.5,3L706.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M693.5,19L693.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M666.5,19L666.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M679.5,6L679.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M652.5,3L652.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M639.5,19L639.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M612.5,19L612.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M625.5,6L625.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M598.5,3L598.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M585.5,19L585.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M558.5,19L558.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M571.5,6L571.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M544.5,3L544.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M531.5,19L531.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M504.5,19L504.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M517.5,6L517.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M490.5,3L490.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M477.5,19L477.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M450.5,19L450.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M463.5,6L463.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M436.5,3L436.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M423.5,19L423.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M396.5,19L396.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M409.5,6L409.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M382.5,3L382.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M369.5,19L369.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M342.5,19L342.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M355.5,6L355.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M328.5,3L328.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M315.5,19L315.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M288.5,19L288.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M301.5,6L301.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M274.5,3L274.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M261.5,19L261.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M234.5,19L234.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M247.5,6L247.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M220.5,3L220.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M207.5,19L207.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M180.5,19L180.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M193.5,6L193.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M166.5,3L166.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M153.5,19L153.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M126.5,19L126.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M139.5,6L139.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M112.5,3L112.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M99.5,19L99.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M72.5,19L72.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M85.5,6L85.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M58.5,3L58.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M45.5,19L45.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M18.5,19L18.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M31.5,6L31.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M4.5,3L4.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><rect x="4" y="12" width="756" height="4" r="0" rx="0" ry="0" fill="#cccccc" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="5" y="7" width="754" height="11" r="0" rx="0" ry="0" fill="none" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="4" y="6" width="757" height="13" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" opacity="0.1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.1;"></rect><text x="4" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">7</tspan></text><text x="58" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">8</tspan></text><text x="112" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">9</tspan></text><text x="166" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">10</tspan></text><text x="220" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">11</tspan></text><text x="274" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">12</tspan></text><text x="328" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">13</tspan></text><text x="382" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">14</tspan></text><text x="436" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">15</tspan></text><text x="490" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">16</tspan></text><text x="544" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">17</tspan></text><text x="598" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">18</tspan></text><text x="652" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">19</tspan></text><text x="706" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">20</tspan></text><text x="760" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">21</tspan></text></svg><img></div>           </td>         </tr>         <tr class="detailheader">           <td>Start</td>           <td>Stop</td>           <td>Project</td>           <td>Service</td>           <td>Notes</td>           <td colspan="2">Ops</td>         </tr>       <tr class="dateheader-row">           <td colspan="7" class="dateheader">             <span class="day-date"><span class="expanded"></span>Tue 08/13/2013</span><span class="punch-info">Content</span><span class="daily-total question">8.5h</span>             <div class="greenbar" style="width: 100%; height: 40px;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="770" height="40" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><path fill="none" stroke="#000000" d="M801.5,19L801.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M774.5,19L774.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M787.5,6L787.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M760.5,3L760.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M747.5,19L747.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M720.5,19L720.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M733.5,6L733.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M706.5,3L706.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M693.5,19L693.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M666.5,19L666.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M679.5,6L679.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M652.5,3L652.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M639.5,19L639.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M612.5,19L612.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M625.5,6L625.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M598.5,3L598.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M585.5,19L585.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M558.5,19L558.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M571.5,6L571.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M544.5,3L544.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M531.5,19L531.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M504.5,19L504.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M517.5,6L517.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M490.5,3L490.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M477.5,19L477.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M450.5,19L450.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M463.5,6L463.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M436.5,3L436.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M423.5,19L423.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M396.5,19L396.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M409.5,6L409.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M382.5,3L382.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M369.5,19L369.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M342.5,19L342.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M355.5,6L355.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M328.5,3L328.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M315.5,19L315.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M288.5,19L288.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M301.5,6L301.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M274.5,3L274.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M261.5,19L261.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M234.5,19L234.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M247.5,6L247.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M220.5,3L220.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M207.5,19L207.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M180.5,19L180.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M193.5,6L193.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M166.5,3L166.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M153.5,19L153.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M126.5,19L126.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M139.5,6L139.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M112.5,3L112.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M99.5,19L99.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M72.5,19L72.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M85.5,6L85.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M58.5,3L58.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M45.5,19L45.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M18.5,19L18.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M31.5,6L31.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M4.5,3L4.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><lineargradient id="r7" x1="0" y1="0.9999999999999998" x2="1" y2="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><stop offset="50%" stop-color="#66d0d0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></stop><stop offset="99%" stop-color="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></stop></lineargradient><lineargradient id="r8" x1="0" y1="0.9999999999999998" x2="1" y2="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><stop offset="50%" stop-color="#66d0d0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></stop><stop offset="99%" stop-color="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></stop></lineargradient><lineargradient id="r9" x1="0" y1="0.9999999999999998" x2="1" y2="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><stop offset="50%" stop-color="#d0d0d0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></stop><stop offset="99%" stop-color="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></stop></lineargradient><lineargradient id="ra" x1="0" y1="0.9999999999999998" x2="1" y2="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><stop offset="50%" stop-color="#66d0d0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></stop><stop offset="99%" stop-color="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></stop></lineargradient></defs><rect x="4" y="12" width="756" height="4" r="0" rx="0" ry="0" fill="#cccccc" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="5" y="7" width="106" height="11" r="0" rx="0" ry="0" fill="none" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="4" y="6" width="109" height="13" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" opacity="0.1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.1;"></rect><rect x="599" y="7" width="160" height="11" r="0" rx="0" ry="0" fill="none" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="598" y="6" width="163" height="13" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" opacity="0.1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.1;"></rect><rect x="545" y="7" width="52" height="11" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><a title="" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect x="544" y="6" width="55" height="13" r="0" rx="0" ry="0" fill="url(#r7)" stroke="none" opacity="1" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;"></rect></a><rect x="396.5" y="7" width="146.5" height="11" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><a title="" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect x="395.5" y="6" width="149.5" height="13" r="0" rx="0" ry="0" fill="url(#r8)" stroke="none" opacity="1" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;"></rect></a><rect x="369.5" y="7" width="25" height="11" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><a title="" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect x="368.5" y="6" width="28" height="13" r="0" rx="0" ry="0" fill="url(#r9)" stroke="none" opacity="1" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;"></rect></a><rect x="113" y="7" width="254.5" height="11" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><a title="" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect x="112" y="6" width="257.5" height="13" r="0" rx="0" ry="0" fill="url(#ra)" stroke="none" opacity="1" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;"></rect></a><text x="4" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">7</tspan></text><text x="58" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">8</tspan></text><text x="112" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">9</tspan></text><text x="166" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">10</tspan></text><text x="220" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">11</tspan></text><text x="274" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">12</tspan></text><text x="328" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">13</tspan></text><text x="382" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">14</tspan></text><text x="436" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">15</tspan></text><text x="490" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">16</tspan></text><text x="544" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">17</tspan></text><text x="598" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">18</tspan></text><text x="652" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">19</tspan></text><text x="706" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">20</tspan></text><text x="760" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">21</tspan></text><rect x="592" y="0" width="6" height="25" r="0" rx="0" ry="0" fill="#f0f0f0" stroke="#000000" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: col-resize; opacity: 1; display: none;"></rect><rect x="544" y="0" width="6" height="25" r="0" rx="0" ry="0" fill="#f0f0f0" stroke="#000000" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: col-resize; opacity: 1; display: none;"></rect><rect x="538" y="0" width="6" height="25" r="0" rx="0" ry="0" fill="#f0f0f0" stroke="#000000" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: col-resize; opacity: 1; display: none;"></rect><rect x="395.5" y="0" width="6" height="25" r="0" rx="0" ry="0" fill="#f0f0f0" stroke="#000000" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: col-resize; opacity: 1; display: none;"></rect><rect x="389.5" y="0" width="6" height="25" r="0" rx="0" ry="0" fill="#f0f0f0" stroke="#000000" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: col-resize; opacity: 1; display: none;"></rect><rect x="368.5" y="0" width="6" height="25" r="0" rx="0" ry="0" fill="#f0f0f0" stroke="#000000" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: col-resize; opacity: 1; display: none;"></rect><rect x="362.5" y="0" width="6" height="25" r="0" rx="0" ry="0" fill="#f0f0f0" stroke="#000000" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: col-resize; opacity: 1; display: none;"></rect><rect x="112" y="0" width="6" height="25" r="0" rx="0" ry="0" fill="#f0f0f0" stroke="#000000" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: col-resize; opacity: 1; display: none;"></rect></svg><img></div>           </td>         </tr>         <tr class="detailheader" style="display: table-row;">           <td>Start</td>           <td>Stop</td>           <td>Project</td>           <td>Service</td>           <td>Notes</td>           <td colspan="2">Ops</td>         </tr><tr id="punch-row-340460" style="" class="even"><td class="punch-start">17</td><td class="punch-stop">18</td><td class="punch-project">Atomic Internship</td><td class="project-service">Software Development</td><td class="punch-notes"><b>Practicing Javascript</b><br></td><td><a href="https://punchit.atomicobject.com/newpunch.php#" punchid="340460" class="edit-link"><div class="edit-button" style="width: 16px; height: 16px;"></div></a></td><td><a class="delete-link" href="https://punchit.atomicobject.com/newpunch.php#" punchid="340460"><div class="delete-button" style="width: 16px; height: 16px;"></div></a></td></tr><tr id="punch-row-340405" style="" class="odd"><td class="punch-start">14.25</td><td class="punch-stop">17</td><td class="punch-project">Atomic Internship</td><td class="project-service">Software Development</td><td class="punch-notes"><b>Happiness KPI</b><br></td><td><a href="https://punchit.atomicobject.com/newpunch.php#" punchid="340405" class="edit-link"><div class="edit-button" style="width: 16px; height: 16px;"></div></a></td><td><a class="delete-link" href="https://punchit.atomicobject.com/newpunch.php#" punchid="340405"><div class="delete-button" style="width: 16px; height: 16px;"></div></a></td></tr><tr id="punch-row-340403" style="" class="even"><td class="punch-start">13.75</td><td class="punch-stop">14.25</td><td class="punch-project">Lunch</td><td class="project-service"></td><td class="punch-notes"><b></b><br></td><td><a href="https://punchit.atomicobject.com/newpunch.php#" punchid="340403" class="edit-link"><div class="edit-button" style="width: 16px; height: 16px;"></div></a></td><td><a class="delete-link" href="https://punchit.atomicobject.com/newpunch.php#" punchid="340403"><div class="delete-button" style="width: 16px; height: 16px;"></div></a></td></tr><tr id="punch-row-340402" style="" class="odd"><td class="punch-start">9</td><td class="punch-stop">13.75</td><td class="punch-project">Atomic Internship</td><td class="project-service">Software Development</td><td class="punch-notes"><b>Happiness KPI</b><br></td><td><a href="https://punchit.atomicobject.com/newpunch.php#" punchid="340402" class="edit-link"><div class="edit-button" style="width: 16px; height: 16px;"></div></a></td><td><a class="delete-link" href="https://punchit.atomicobject.com/newpunch.php#" punchid="340402"><div class="delete-button" style="width: 16px; height: 16px;"></div></a></td></tr>       <tr class="dateheader-row">           <td colspan="7" class="dateheader">             <span class="day-date"><span class="expanded"></span>Mon 08/12/2013</span><span class="punch-info">Content</span><span class="daily-total question">9.25h</span>             <div class="greenbar" style="width: 100%; height: 40px;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="770" height="40" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><path fill="none" stroke="#000000" d="M801.5,19L801.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M774.5,19L774.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M787.5,6L787.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M760.5,3L760.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M747.5,19L747.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M720.5,19L720.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M733.5,6L733.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M706.5,3L706.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M693.5,19L693.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M666.5,19L666.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M679.5,6L679.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M652.5,3L652.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M639.5,19L639.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M612.5,19L612.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M625.5,6L625.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M598.5,3L598.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M585.5,19L585.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M558.5,19L558.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M571.5,6L571.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M544.5,3L544.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M531.5,19L531.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M504.5,19L504.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M517.5,6L517.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M490.5,3L490.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M477.5,19L477.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M450.5,19L450.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M463.5,6L463.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M436.5,3L436.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M423.5,19L423.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M396.5,19L396.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M409.5,6L409.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M382.5,3L382.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M369.5,19L369.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M342.5,19L342.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M355.5,6L355.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M328.5,3L328.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M315.5,19L315.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M288.5,19L288.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M301.5,6L301.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M274.5,3L274.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M261.5,19L261.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M234.5,19L234.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M247.5,6L247.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M220.5,3L220.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M207.5,19L207.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M180.5,19L180.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M193.5,6L193.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M166.5,3L166.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M153.5,19L153.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M126.5,19L126.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M139.5,6L139.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M112.5,3L112.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M99.5,19L99.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M72.5,19L72.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M85.5,6L85.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M58.5,3L58.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M45.5,19L45.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M18.5,19L18.5,21" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#000000" d="M31.5,6L31.5,23" opacity="0.6" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.6; stroke-width: 1px;"></path><path fill="none" stroke="#000000" d="M4.5,3L4.5,22" opacity="0.5" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.5; stroke-width: 1px;"></path><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><lineargradient id="r0" x1="0" y1="0.9999999999999998" x2="1" y2="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><stop offset="50%" stop-color="#66d0d0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></stop><stop offset="99%" stop-color="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></stop></lineargradient></defs><rect x="4" y="12" width="756" height="4" r="0" rx="0" ry="0" fill="#cccccc" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="5" y="7" width="106" height="11" r="0" rx="0" ry="0" fill="none" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="4" y="6" width="109" height="13" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" opacity="0.1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.1;"></rect><rect x="612.5" y="7" width="146.5" height="11" r="0" rx="0" ry="0" fill="none" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="611.5" y="6" width="149.5" height="13" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" opacity="0.1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0.1;"></rect><rect x="113" y="7" width="497.5" height="11" r="0" rx="0" ry="0" fill="#ffffff" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><a title="" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect x="112" y="6" width="500.5" height="13" r="0" rx="0" ry="0" fill="url(#r0)" stroke="none" opacity="1" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1; fill-opacity: 1;"></rect></a><text x="4" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">7</tspan></text><text x="58" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">8</tspan></text><text x="112" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">9</tspan></text><text x="166" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">10</tspan></text><text x="220" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">11</tspan></text><text x="274" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">12</tspan></text><text x="328" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">13</tspan></text><text x="382" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">14</tspan></text><text x="436" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">15</tspan></text><text x="490" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">16</tspan></text><text x="544" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">17</tspan></text><text x="598" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">18</tspan></text><text x="652" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">19</tspan></text><text x="706" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">20</tspan></text><text x="760" y="31.466796875" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; line-height: normal; font-family: Arial;"><tspan style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">21</tspan></text><rect x="605.5" y="0" width="6" height="25" r="0" rx="0" ry="0" fill="#f0f0f0" stroke="#000000" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: col-resize; opacity: 1; display: none;"></rect><rect x="112" y="0" width="6" height="25" r="0" rx="0" ry="0" fill="#f0f0f0" stroke="#000000" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: col-resize; opacity: 1; display: none;"></rect></svg><img></div>           </td>         </tr>         <tr class="detailheader" style="display: table-row;">           <td>Start</td>           <td>Stop</td>           <td>Project</td>           <td>Service</td>           <td>Notes</td>           <td colspan="2">Ops</td>         </tr><tr id="punch-row-340400" style="" class="even"><td class="punch-start">9</td><td class="punch-stop">18.25</td><td class="punch-project">Atomic Internship</td><td class="project-service">Software Development</td><td class="punch-notes"><b>Happiness KPI</b><br></td><td><a href="https://punchit.atomicobject.com/newpunch.php#" punchid="340400" class="edit-link"><div class="edit-button" style="width: 16px; height: 16px;"></div></a></td><td><a class="delete-link" href="https://punchit.atomicobject.com/newpunch.php#" punchid="340400"><div class="delete-button" style="width: 16px; height: 16px;"></div></a></td></tr>       </tbody></table>
+
+          <!-- Form to edit a punch -->
+          <form id="editPunchForm" action="./Atomic PunchIt_files/Atomic PunchIt.html" method="post">
+            <input id="ePunchId" type="hidden" name="id" value="">
+            <input type="hidden" name="edit" value="1">
+            <input type="hidden" name="week" value="709">
+          </form>
+
+          <!-- Form to delete a punch -->
+          <form id="deletePunchForm" action="./Atomic PunchIt_files/Atomic PunchIt.html" method="post">
+            <input id="dPunchId" type="hidden" name="id" value="">
+            <input type="hidden" name="delete" value="1">
+            <input type="hidden" name="week" value="709">
+          </form>
+
+        </td>
+
+      </tr>
+    </tbody></table>
+    <script src="./Atomic PunchIt_files/better-punchit.js" type="text/javascript"></script>
+  
+</td></tr></tbody></table></td></tr></tbody></table><img id="punchitapi-blank-img" src="./Atomic PunchIt_files/blank.png"><div id="cooltip" style="top: 546px; left: 206px; display: none;"><span class="times">14.25 - 17</span>&nbsp;<span class="project-name">Atomic Internship</span>&nbsp;<span class="story-name">Happiness KPI</span></div><div id="dragtip"></div><script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); form.lpsubmitorig2(); } } }}catch(e){}</script><div class="vimiumReset vimiumHUD" style="right: 150px; opacity: 0; display: none;"></div></body></html>

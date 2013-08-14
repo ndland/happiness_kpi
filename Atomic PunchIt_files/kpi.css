@@ -1,0 +1,97 @@
+
+@font-face {
+ font-family: "DINOT";
+  src: url("DINOT.otf") format("opentype");
+  }
+
+@font-face {
+ font-family: "DINOT-Light";
+ src: url("DINOT-Light.otf") format("opentype");
+ }  
+
+/* Week */
+rect.week-billable { 
+  fill: #1e3332;
+}
+
+rect.week-total {
+  fill: #e5f4f3;
+}
+
+rect.week-total-avg {
+  fill: #b0dfde;
+}
+
+rect.week-billable-avg {
+  fill: #79ccc7;
+}
+
+rect.week-target {
+  fill: #1e3332;
+}
+
+/* Quarter */
+rect.quarter-co-utilization {
+  fill: #f9aa99;
+}
+
+rect.quarter-utilization-goal {
+  fill: #fbddd6;
+}
+
+rect.quarter-utilization {
+  fill: #3e2a26;
+}
+
+/* Labels */
+
+text.label {
+  fill: #596665;
+  font-size: 16px;
+  font-family: DINOT;
+  text-anchor: end;
+  dominant-baseline: top;
+}
+
+text.numeric-label {
+  font-family: DINOT;
+  text-anchor: start;
+  font-size: 23px;
+}
+
+text.numeric-label.total {
+  font-size: 14px;
+  fill: #aaa;
+}
+
+text.small-label {
+  font-size: 12px;
+  font-family: DINOT-Light;
+  text-anchor: end;
+  fill: #ccc;
+}
+
+text.legend {
+  text-anchor: start;
+}
+
+/* Axes */
+.axis {
+  fill: #ccc;
+  stroke: none;
+  stroke-width: 0;
+  fill:none;
+}
+
+.axis line {
+  shape-rendering: crispEdges;
+  stroke-width: 1px;
+  stroke: #ccc;
+}
+
+.axis text {
+  text-rendering: geometricPrecision;
+  font-family: DINOT-Light;
+  fill: #ccc;
+  font-size: 12px;
+}
